@@ -1,0 +1,50 @@
+<div class="grid-start">
+    <div class=" quest adminForm2">
+        <form action="/admin/activites/createArts" method="POST">
+            <label>Titre
+                <input type="text" name="titre" required>
+            </label>
+            <label>Description
+                <textarea type="textarea" class="champText" name="description" required></textarea>
+            </label>
+            <label>Sous-categorie
+                <select name="sousCategorie">
+                    <option value="practice">Practice</option>
+                    <option value ="culture">Culture</option>
+                    <option value="expressivite">Expressivité</option>
+                </select>
+            </label>
+            <label>Difficulté
+                <input type="text" name="difficulte" required>
+            </label>
+            <label>%Practice
+                <input type="text" name="pourcentagePractice" required>
+            </label>
+            <label>%Culture
+                <input type="text" name="pourcentageCulture" required>
+            </label>
+            <label>%Expressivité
+                <input type="text" name="pourcentageExpressivite" required>
+            </label>
+            <label>Prérequis F
+                <input type="text" name="prerequisF" required>
+            </label>
+            <label>Prérequis D
+                <input type="text" name="prerequisD" required>
+            </label>
+            <label>Prérequis C
+                <input type="text" name="prerequisC" required>
+            </label>
+            <label>Prérequis B
+                <input type="text" name="prerequisB" required>
+            </label>
+            <label>Prérequis A
+                <input type="text" name="prerequisA" required>
+            </label>
+            <label>Prérequis S
+                <input type="text" name="prerequisS" required>
+            </label>
+            <input id="buttonCreate" type="submit" value="CREER">
+        </form>
+    </div>
+</div>

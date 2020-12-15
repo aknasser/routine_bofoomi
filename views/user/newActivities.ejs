@@ -1,0 +1,24 @@
+<div class= "grid-hero">
+    <div class="new1">
+        <h1>Go !</h1>
+        <h3>Choisis une catégorie pour ta nouvelle activité</h3>
+
+        <div class="">
+            <h3><%= hero.corps.aspirationCorps %></h3>   <!--aspirationCorps.titre-->
+            <form class="formNewActivities" action=" <%= `/users/newActivities/${hero._id}` %>" method="POST">
+                <h5><%= hero.corps.scorePuissance %></h5> <!--user.corps.scorePuissance-->
+                <select name="sousCategorie">
+                    <option value="puissance">Puissance</option>
+                    <option value="technique">Technique</option>
+                    <option value="souplesse">Souplesse</option>
+                    <option value="sante">Santé</option>
+                </select>
+                <input type="submit" value="NEW" class="buttonNew">
+            </form>
+            <div class="preferences">
+                <h4><%= hero.corps.sportFavori1 %></h4>
+                <h4><%= hero.corps.sportFavori2 %></h4>
+            </div>
+        </div>
+    </div>
+</div>

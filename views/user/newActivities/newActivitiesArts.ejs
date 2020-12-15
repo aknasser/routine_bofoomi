@@ -1,0 +1,23 @@
+<div class= "grid-hero">
+    <div class="new1">
+        <h1>Go !</h1>
+        <h3>Choisis une catégorie pour ta nouvelle activité</h3>
+
+        <div class="">
+            <h3><%= hero.arts.aspirationArts %></h3>   <!--aspirationArts.titre-->
+            <form class="formNewActivities" action=" <%= `/users/newActivities/${hero._id}/arts` %>" method="POST">
+                <h5><%= hero.arts.scoreArts %></h5> <!--user.arts.scorePuissance-->
+                <select name="sousCategorie">
+                    <option value="practice">Practice</option>
+                    <option value="culture">Culture</option>
+                    <option value="expressivite">Expressivite</option>
+                </select>
+                <input type="submit" value="NEW" class="buttonNew">
+            </form>
+            <div class="preferences">
+                <h4><%= hero.arts.artFavori1 %></h4>
+                <h4><%= hero.arts.artFavori2 %></h4>
+            </div>
+        </div>
+    </div>
+</div>

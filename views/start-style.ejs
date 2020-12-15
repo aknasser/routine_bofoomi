@@ -1,0 +1,165 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2>Style</h2>
+        <img src="/images/questionnaire/dress.png" alt="un joli micro">
+    </div>
+    <div class="quest practical2">
+        <form action="/users/create/style" method="POST">
+            <div class="qcm">
+                <input id="invisibleId" type="text" name="id" value="<%= id %>">        <!--L'invisible ID pour passer l'id de page en page-->
+                
+                <h3 class="thequestion">Combien de vêtements achètes-tu par an ? (approximativement)</h3>
+                <div class="multiradio-form">
+                    <label class="label5item">une tonne
+                        <input type="radio" name="vetements" value="5" required>
+                    </label>
+                    <label class="label5item">Un beau paquet
+                        <input type="radio" name="vetements" value="4">
+                    </label>
+                    <label class="label5item">Quelques uns
+                        <input type="radio" name="vetements" value="3">
+                    </label>
+                    <label class="label5item">Pas beaucoup
+                        <input type="radio" name="vetements" value="2">
+                    </label>
+                    <label class="label5item">Aucun
+                        <input type="radio" name="vetements" value="1">
+                    </label>
+                </div>
+        </div>
+
+            <div class="qcm">
+                <h3 class="thequestion">Tu aimes les vêtements/déco qui détonnent</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">Totalement
+                            <input type="radio" name="colorful" value="5" required>
+                        </label>
+                        <label class="label5item">Plutôt, oui.
+                            <input type="radio" name="colorful" value="4">
+                        </label>
+                        <label class="label5item">Sans plus
+                            <input type="radio" name="colorful" value="3">
+                        </label>
+                        <label class="label5item">Pas vraiment
+                            <input type="radio" name="colorful" value="2">
+                        </label>
+                        <label class="label5item">Pas du tout.
+                            <input type="radio" name="colorful" value="1">
+                        </label>
+                    </div>
+            </div>
+
+
+            <div class="qcm">
+                <h3 class="thequestion">Tu aimes les vêtements/déco qui respire l'élégance</h3>
+                <div class="multiradio-form">
+                    <label class="label5item">Totalement
+                        <input type="radio" name="classy" value="5" required>
+                    </label>
+                    <label class="label5item">Plutôt, oui.
+                        <input type="radio" name="classy" value="4">
+                    </label>
+                    <label class="label5item">Sans plus
+                        <input type="radio" name="classy" value="3">
+                    </label>
+                    <label class="label5item">Pas vraiment
+                        <input type="radio" name="classy" value="2">
+                    </label>
+                    <label class="label5item">Pas du tout.
+                        <input type="radio" name="classy" value="1">
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="qcm">
+                <h3 class="thequestion">Tu aimes les vêtements/déco misant sur la simplicité</h3>
+                <div class="multiradio-form">
+                    <label class="label5item">Totalement
+                        <input type="radio" name="simple" value="5" required>
+                    </label>
+                    <label class="label5item">Plutôt, oui.
+                        <input type="radio" name="simple" value="4">
+                    </label>
+                    <label class="label5item">Sans plus
+                        <input type="radio" name="simple" value="3">
+                    </label>
+                    <label class="label5item">Pas vraiment
+                        <input type="radio" name="simple" value="2">
+                    </label>
+                    <label class="label5item">Pas du tout.
+                        <input type="radio" name="simple" value="1">
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="qcm">
+                <h3 class="thequestion">Aimes-tu ton style vestimentaire ?</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">FASHION GOD.
+                            <input type="radio" name="style" value="5" required>
+                        </label>
+                        <label class="label5item">"Je suis plutôt stylé quand même"
+                            <input type="radio" name="style" value="4">
+                        </label>
+                        <label class="label5item">Passable
+                            <input type="radio" name="style" value="3">
+                        </label>
+                        <label class="label5item">Bof
+                            <input type="radio" name="style" value="2">
+                        </label>
+                        <label class="label5item">Je me dégoûte...
+                            <input type="radio" name="style" value="1">
+                        </label>
+                    </div>
+            </div>
+            <div class="qcm">
+                <h3 class="thequestion">Tes vêtements sont-ils en phase avec ton style idéal ?</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">Totalement
+                            <input type="radio" name="accordStyle" value="5" required>
+                        </label>
+                        <label class="label5item">En grande partie
+                            <input type="radio" name="accordStyle" value="4">
+                        </label>
+                        <label class="label5item">La moitié
+                            <input type="radio" name="accordStyle" value="3">
+                        </label>
+                        <label class="label5item">Bof
+                            <input type="radio" name="accordStyle" value="2">
+                        </label>
+                        <label class="label5item">Pas du tout.
+                            <input type="radio" name="accordStyle" value="1">
+                        </label>
+                    </div>
+            </div>
+                    <div class="bonus"> 
+                        <label>Ton style vestimentaire idéal ?
+                            <input type="text" name="styleIdeal">
+                        </label>
+                        <label>Le vêtement que tu voudrais absolument acquérir ?
+                            <input type="text" name="vetementDesire">
+                        </label>
+                    </div>
+    
+                    <div class="qcm">
+                        <h3 class="thequestion">Un jour, ton style sera...</h3>
+                            <div class="multiradio-form aspiration">
+                                <label class="label5item"> Plein de Vie
+                                    <input type="radio" name="aspirationStyle" value="La Voie de l'Excentrique" required>
+                                </label>
+                                <label class="label5item"> Stylish à la James Bond.
+                                    <input type="radio" name="aspirationStyle" value="La Voie du Stylish">
+                                </label>
+                                <label class="label5item"> BG
+                                    <input type="radio" name="aspirationStyle" value="La Voie du BG">
+                                </label>
+                            </div>
+                    </div>
+
+            <input class="button" type="submit" value="SUIVANT">
+        </form>
+        
+    </div>
+</div>

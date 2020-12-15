@@ -1,0 +1,20 @@
+<div class= "grid-hero">
+    <div class="new1">
+        <h1>Go !</h1>
+        <h3>Choisis une catégorie pour ta nouvelle activité</h3>
+
+        <div class="">
+            <h3><%= hero.cooking.aspirationCooking %></h3>   <!--aspirationCooking.titre-->
+            <form class="formNewActivities" action=" <%= `/users/newActivities/${hero._id}/cooking` %>" method="POST">
+                <h5><%= hero.cooking.scoreCooking %></h5> <!--user.cooking.scorePuissance-->
+                <select name="sousCategorie">
+                    <option value="classic">Classic</option>
+                    <option value="healthy">Healthy</option>
+                    <option value="decouverte">Decouverte</option>
+                    <option value="plaisir">Plaisir</option>
+                </select>
+                <input type="submit" value="NEW" class="buttonNew">
+            </form>
+        </div>
+    </div>
+</div>

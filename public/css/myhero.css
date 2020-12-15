@@ -1,0 +1,1897 @@
+html{
+    font-size: 62,5%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    }
+/* La taille de référence est de 16px. 
+Grâce à ces 62,5%, la taille de référence sur le document est de 10px (ou 1rem)
+*/
+
+
+
+/* LA NAVBAR  */
+
+.navbar{
+     background-color: rgb(248, 225, 14);
+}
+
+#navbar-desktop{
+    display:none;
+}
+
+#navbar-mobile{
+    text-align: right;
+    background-color:white;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+}
+
+#buttonToggle{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    content: "";
+    background-size: 100% 100%;
+}
+
+
+
+.nav-item{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-item a{
+    color: rgba(6, 26, 139, 0.925);
+}
+
+
+.nav-item a:hover{
+    color:rgba(80, 104, 240, 0.925);
+    text-decoration: none;
+}
+
+#NavTitre {                   /* LE BANDEAU DE LA NAVBAR (VERSION MOBILE) */
+    font-size: 1.5rem;
+    color: rgba(6, 26, 139, 0.925);
+    font-weight: bold;
+}
+
+.nav-connexion{
+    background-color: rgb(248, 225, 14);
+    border-radius:0.5rem;
+}
+#nav-deconnexion{
+    background-color: rgba(6, 26, 139, 0.925);
+    border-radius:0.5rem;
+    color:red;
+}
+
+
+
+
+
+/* LE BODY  */
+
+.content{
+    color: white;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* LE FOOTER  */
+
+.footer{
+    background-color: white;
+    text-align:center;
+    color:rgba(6, 26, 139, 0.925);
+}
+
+.footer h3 {
+    font-size: 2.5rem;
+}
+
+.footer h4 {
+    font-style:italic;
+    font-size: 1.75rem;
+}
+
+.footer h5 {
+    margin-top: 2.25rem;
+    font-style:italic;
+}
+
+
+.footer h6 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+/* LES LIENS */
+.leLien{
+    text-decoration: none;
+}
+
+
+/* -------------------------------------------LA PAGE INDEX --------------------------------------------- */
+
+.grid-index{
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 50rem repeat(6, auto);
+
+}
+
+.presentation1{
+    grid-area: 1 / 1 / 2 / 3 ;
+    min-height: 20rem;
+}
+.comp img{
+    width: 75%;
+    display: block;
+    margin: 4rem auto;
+    border-radius: 1rem;
+}
+
+
+.comp h3{
+    margin-top: 5rem;
+    text-transform:uppercase;
+    text-align:center;
+    font-size: 1.5rem;
+}
+
+.yellow h3, .yellow h5{
+    color: rgba(6, 26, 139, 0.925);
+}
+
+
+
+
+.comp h5{
+    margin: 2rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.purple h2, .yellow h2{
+    text-transform:uppercase;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(6, 26, 139, 0.925);
+    background-color:rgb(248, 225, 14);
+    border-radius: 2rem;
+    display:block;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width:95%;
+    text-align:center;
+}
+
+
+.yellow h2{
+    color: rgb(248, 225, 14);
+    background-color:rgba(6, 26, 139, 0.925);
+}
+
+
+
+/* DISPOSITION GRID (INDEX) */
+
+.corps2{
+    grid-area: 2 / 1 / 3 / 3 ;
+}
+
+.esprit3{
+    grid-area: 3 / 1 / 4 / 3 ;
+
+}
+
+.social4{
+    grid-area: 4 / 1 / 5 / 3 ;
+}
+
+.art5{
+    grid-area: 5 / 1 / 6 / 3 ;
+}
+
+.laBase6{
+    grid-area: 6 / 1 / 7 / 3 ;
+}
+
+.cooking7{
+    grid-area: 7 / 1 / 8 / 3 ;
+}
+
+
+
+
+
+/* LA PRESENTATION DE LA PROPOSITION DE VALEUR */
+
+
+.presentation1{
+    color:white;
+    background-image:url("../images/mainpage/homepic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  /* Pour que l'image couvre l'ensemble de l'espace */
+    position:relative;   /* Le texte pourra ensuite être positionné par rapport à l'image */
+}
+
+
+.presentation1 .puv{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);              /* La combinaison absolute, left, top, transform permet de placer le bloc de texte au centre de l'espace */
+    width: 100%;    
+}
+
+.presentation1 img{
+    width:100%;
+    opacity: 25%;
+}
+
+.presentation1 h2{
+    text-transform: uppercase;
+    text-align:center;
+    font-weight: bolder;
+    color: rgb(248, 225, 14);
+    font-size: 2.5rem;
+
+}
+
+.presentation1 h3{
+    text-align:center;
+    font-style:italic;
+
+}
+
+.presentation1 a, .presentation1 a:hover {
+    text-decoration: none;
+}
+.buttoncta{
+    display: block;
+    margin: 3.5rem auto;
+    font-size: 2.5rem;
+    border-radius: 1rem;
+    border: solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(6, 26, 139, 0.925);
+    background-color: white;
+    width: 95%;
+}
+
+.buttoncta:hover{
+    color:rgb(248, 225, 14);
+    background-color:rgba(6, 26, 139, 0.925);
+    border: solid rgba(6, 26, 139, 0.925);
+}
+
+
+
+/*BACKGROUND POUR LES DIFFERENTS POLES DE COMPETENCES */
+
+.purple{
+    background-color:rgba(6, 26, 139, 0.925);
+}
+
+.purple h3:hover{
+    color: rgb(248, 225, 14);
+}
+
+
+.yellow{
+    background-color: rgb(248, 225, 14);
+}
+
+.yellow h3:hover{
+    color:rgba(6, 26, 139, 0.925);
+}
+
+
+
+
+/* -------------------------------------------LA PAGE CONCEPT --------------------------------------------- */
+.grid-concept{
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    background-color: rgba(6, 26, 139, 0.925);
+    color:white;
+}
+
+.title1{
+    grid-area: 1 / 1 / 2 / 3 ;
+}
+
+.pic2{
+    grid-area: 2 / 1 / 3 / 3 ;
+}
+
+.text3{
+    grid-area: 3 / 1 / 4 / 3 ;
+}
+
+/* LE CONCEPT */
+
+
+
+
+.title1 h2{
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    color:rgba(6, 26, 139, 0.925);
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+.conceptTitle h2{
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: rgba(6, 26, 139, 0.925);
+    color:white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+/* L'IMAGE */
+
+.pic2 img{
+    width:95%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    display:block;
+}
+/* LE TEXT */
+
+.text3 h3{
+    font-style:italic;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align:center;
+    color: rgb(248, 225, 14)
+}
+
+.text3 a:hover {
+    text-decoration: none;
+}
+
+.text3 ul{
+    margin: 3rem auto;
+    list-style-type: none;
+}
+
+.text3 li{
+    font-size: 1.5rem;
+    margin:1.25rem auto;
+    text-align:center;
+}
+
+
+
+.text3 .buttoncta:hover{
+    text-decoration:none;
+    color:rgba(6, 26, 139, 0.925);
+    background-color:rgb(248, 225, 14);
+    border: solid rgba(6, 26, 139, 0.925);
+}
+
+/* -------------------------------------------LES PAGE DU QUIZZ (EN GENERAL) --------------------------------------------- */
+.grid-start{
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    background-color:rgba(6, 26, 139, 0.925);
+}
+
+.titleimage1{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 1 / 1 / 2 / 3 ;
+}
+
+.titleimage1 h2{
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    text-align: center;
+    margin: 5rem auto 5rem;
+    font-weight: bold;
+
+}
+
+.titleimage1 img{
+    max-width:85%;
+    display:block;
+    margin: 1rem auto 5rem;
+}
+
+
+.quest, .id2{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 2 / 1 / 3 / 3 ;
+
+}
+
+
+.quest form, .id2 form{
+    display:flex;
+    flex-direction: column;
+}
+
+.quest input[type=text], .login-form input[type=email], .login-form input[type=password], .quest select{
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+}
+
+.champText{
+    width: 100%;
+    height: 22rem;
+    padding: 0.35rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    resize: none;
+    display: block;
+}
+
+.id2 input[type=text], .id2 input[type=password], .id2 input[type=email]{
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    width: 95%;
+    display: block;
+    margin: 1rem 0rem;
+}
+
+
+
+.id2 input[type=color]{
+    width: 95%;
+    height: 5rem;
+    border-radius: 1.25rem;
+
+}
+
+option{
+    font-size:1rem;
+}
+
+.groupe-option{
+    text-transform: uppercase;
+    font-size:1.25rem;
+    background-color: rgb(248, 225, 14);
+    font-weight:bold;
+} 
+
+.quest input[type=submit], .id2 input[type=submit], .login-form input[type=submit] {
+    background-color: rgb(248, 225, 14);
+    display:block;
+    color: rgba(6, 26, 139, 0.925);
+    font-weight: bolder;
+    font-size: 4rem;
+    border-radius: 1rem;
+    width: 85%;
+    margin: 10rem auto 5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login-form input[type=submit] {
+    background-color: rgb(248, 225, 14);
+    display:block;
+    color: rgba(6, 26, 139, 0.925);
+    font-weight: bolder;
+    font-size: 4rem;
+    border-radius: 1rem;
+    width: 85%;
+    margin: 5rem auto 5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.quest-button:hover{
+    background-color:white;
+    color:rgba(6, 26, 139, 0.925);
+    text-decoration: none;
+}
+
+
+
+
+/* -------------------------------------------QUIZZ START: "QUI ES-TU ?"--------------------------------------------- */
+
+.id2 label{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(248, 225, 14);
+    margin: 1.5rem 2rem;
+}
+
+
+
+/* -------------------------------------------QUIZZ QCM (EN GENERAL) --------------------------------------------- */
+
+
+
+
+.thequestion{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 7rem;
+    font-weight: bold;
+    width: 75%;
+    margin: 7rem 1rem 1rem;
+}
+
+
+.multiradio-form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 2rem;
+    border: 0.75rem solid rgb(248, 225, 14);
+    margin: 0.5rem;
+
+    
+}
+
+.label5item{
+    font-size: 1.5rem;
+    color: rgba(6, 26, 139, 0.925);
+    font-weight: 350;
+    margin: 1.75rem 1rem 2rem 4rem;
+    position: relative;
+}
+
+.label5item input[type=radio], .label5item input[type=checkbox]{
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    top: 0.55rem;
+    left: -3rem;
+}
+.bonus label{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin: 2rem;
+}
+
+
+.imageAspiration{
+    border-radius: 2rem;
+    width: 75%;
+    margin: 1rem auto;
+
+}
+
+
+.aspiration{
+    border-radius: 2rem;
+}
+
+
+
+/* -------------------------------------------QUIZZ QCM (PAGE FINALE - RESULTATS) --------------------------------------------- */
+.grid-results{
+    display:grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(7, auto);
+    background-color:rgba(6, 26, 139, 0.925);
+}
+
+
+.pointsCorps1{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 2 / 1 / 3 / 2 ;
+
+}
+
+
+.pointsEsprit2{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 3 / 1 / 4 / 2 ;
+
+}
+
+.pointsSocial3{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 4 / 1 / 5 / 2 ;
+
+}
+
+.pointsArts4{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 5 / 1 / 6 / 2 ;
+}
+
+.pointsStyle5{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 6 / 1 / 7 / 2 ;
+}
+
+.pointsCooking6{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 7 / 1 / 8 / 2 ;
+}
+
+
+
+#result-title{
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    margin: 10rem auto;
+    font-weight: bold;
+}
+.titleimage1 h3{
+    font-style: italic;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 5rem 1rem;
+    font-weight: 400;
+}
+
+.aspiration{
+    color: rgba(6, 26, 139, 0.925);
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.75rem solid rgb(248, 225, 14);
+    margin: 1rem;
+    
+}
+
+.skill h4{
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgb(248, 225, 14);
+
+}
+
+.souscategorie h5{
+    font-size: 2rem;
+}
+
+.souscategorie h6{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+.skill{
+    color: white;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.souscategorie{
+    color: white;
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.archetype{
+    color:white;
+    text-align: center;
+}
+
+
+.archetype img {
+    border-radius: 2rem;
+    margin: 2rem auto;
+    width: 75%;
+}
+
+.archetype h3 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 1rem auto 1.5rem;
+    color: rgb(248, 225, 14);
+}
+
+.archetype h4{
+    margin: 3rem auto 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(248, 225, 14);
+}
+
+.archetype h6{
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 4.5rem 0.5rem;
+}
+
+.archetype p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 1rem;
+}
+
+.actionName{
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.multiplicateur{
+    color: rgb(248, 225, 14);
+    font-weight: bold;
+}
+
+.details-aspiration{
+    color:white;
+}
+
+
+
+
+
+#start-button {
+    background-color: rgb(248, 225, 14);
+    display: block;
+    color: rgba(6, 26, 139, 0.925);
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    width: 75%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+#start-button:hover{
+    text-decoration: none;
+    background-color: white;
+}
+
+.validation{
+    margin: 20rem auto 5rem;
+
+}
+
+
+
+/* -------------------------------------------PAGE USER-HERO () ---------------------------------------------------------------------------- */
+.grid-hero{
+    display:grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+}
+
+
+/*DEBUT PARTIE STAT */
+.progression1, .new1{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 1 / 1 / 2 / 2 ;
+}
+
+
+.progression1 h1, .new1 h1{
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: 8rem;
+    text-align:center;
+}
+
+.new1 h3{
+    text-align:center;
+}
+
+.competence{
+    margin: 10rem auto;
+}
+
+.stats{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.competence a:hover{
+    text-decoration: none;
+}
+.corps h2:hover{
+    color:rgb(247,160,144);
+}
+.esprit h2:hover{
+    color:rgb(247,198,144);
+
+}
+.social h2:hover{
+    color:rgb(247,228,144);
+}
+.arts h2:hover{
+    color:rgb(168,247,144);
+
+}
+.style h2:hover{
+    color:rgb(247,144,181);
+}
+.cooking h2:hover{
+    color:rgb(213,144,247);
+}
+
+.stats h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    margin:0.75rem;
+    text-decoration:none;
+
+}
+
+.stats a{
+    text-decoration: none;
+}
+
+
+.stats h3{
+    font-size: 2.5rem;
+}
+
+.stats h4{
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: rgb(248, 225, 14);
+}
+
+
+.stats .booster, .createActivity{
+    background-color: rgb(248, 225, 14);
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    color: rgba(6, 26, 139, 0.925);
+    padding: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 0.75rem;
+}
+
+.booster:hover, .createActivity:hover{
+    background-color: white;
+}
+
+
+.jauge{
+    margin: 2rem 10rem;
+}
+
+.evolution{
+    position:relative;
+}
+
+.evolution h3{
+    font-size: 3rem;
+}
+
+.moins{
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+
+}
+
+.plus{
+    position:absolute;
+    top: -1rem;
+    left: 55rem;
+    
+}
+
+/* LES DETAILS VISIBLES EN CLIQUANT */
+.detail{
+    background-color: white;
+    border-radius: 2rem;
+    margin: 3rem;
+    border: rgb(248, 225, 14) 1rem solid;
+    display:none;   /* CACHE S'AFFICHE QUAND ON CLIQUE SUR L'UN DES TITRE DE CATEGORIE */
+}
+
+.detail-visible, .choixActivite{
+    background-color: white;
+    border-radius: 2rem;
+    margin: 3rem;
+    border: rgb(248, 225, 14) 1rem solid;
+    display:block;    /* ACTIVER GRACE A UNE FONCTION DANS LE FICHIER JS: myhero.js */
+  }
+
+  
+
+
+.detail-visible h3{
+    color: rgba(6, 26, 139, 0.925);
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem auto 5rem;
+}
+.element-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 4rem 2rem 2rem;
+}
+.preferences{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4rem;
+}
+.preferences h4{
+    color: rgba(6, 26, 139, 0.925);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.element-detail h4{
+    font-size: 5rem;
+    text-transform: initial;
+    font-weight: 300;
+    color: rgba(6, 26, 139, 0.925);
+}
+
+
+.element-detail h5{
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(6, 26, 139, 0.925);
+}
+
+.element-detail h6{
+    font-size: 3rem;
+    border-radius: 1rem;
+    font-weight: 900;
+    background-color: rgba(6, 26, 139, 0.925);
+    color: rgb(248, 225, 14);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+
+
+/*FIN PARTIE STAT */
+
+/*DEBUT PARTIE ACTIVITES */
+.activites2{
+    background-color:rgb(248, 225, 14);
+    grid-area: 2 / 1 / 3 / 2 ;
+    color:rgba(6, 26, 139, 0.925);
+    padding: 5rem;
+}
+
+
+.activites2 h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 900;
+    padding: 2rem 0rem;
+}
+
+.activites2 h3{
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: 900;
+    padding: 2rem 0rem;
+    background: rgba(6, 26, 139, 0.925);
+    color: rgb(248, 225, 14);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0rem 5rem 2rem ;
+}
+
+.activite{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+}
+
+.activite h4, .last-results h4{
+    font-size: 3rem;
+    margin: 8rem 1rem 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    border: solid 0.3rem rgba(6, 26, 139, 0.925);
+    width: 75%;
+    text-align: center;
+}
+
+.activite h5, .last-results h5{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
+    font-weight: 300;
+    background-color: rgba(6, 26, 139, 0.925);
+    border-radius: 1rem;
+    color: white;
+    padding: 0.75rem;
+}
+
+.activite h5:hover, .last-results h5:hover{
+
+    background-color: white;
+    color: rgba(6, 26, 139, 0.925);
+    border: solid 0.3rem rgba(6, 26, 139, 0.925);
+}
+
+
+.activite a:hover, .last-results a:hover{
+    text-decoration: none;
+}
+
+.activite select, .last-results h6{
+    font-size: 4rem;
+    margin: 2rem 0rem;
+    font-weight: 900;
+    color:rgba(6, 26, 139, 0.925);
+    border-radius: 0.75rem;
+}
+
+.form-note{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+ .activite .booster, .createActivity:hover{
+    text-decoration: none;
+    background-color: white;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    color: rgba(6, 26, 139, 0.925);
+    padding: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 0.75rem;
+}
+
+.booster:hover{
+    background-color: rgba(6, 26, 139, 0.925);
+    color: white
+}
+
+
+
+
+
+/* LE DETAIL DES ACTIVITES */
+
+.detail-activite{
+    display: none;
+}
+
+.detail-activite-visible{
+    display: block;
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: solid rgba(6, 26, 139, 0.925) 0.5rem;
+}
+
+
+
+.detail-activite-visible h4{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+}
+
+.detail-activite-visible h5{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+
+.detail-activite-visible h6{
+    font-size: 3rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.detail-activite-visible .notepreRequis{
+    font-weight: 700;
+}
+
+
+.detail-activite-visible .scoreActivite{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem auto;
+    font-weight: 900;
+}
+
+
+
+
+
+
+/*FIN PARTIE ACTIVITES */
+
+
+/*DEBUT PARTIE INSPIRATION */
+.inspiration4{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 4 / 1 / 5 / 2 ;
+    text-align: center;
+    padding: 3rem 0rem;
+}
+
+.inspiration4 h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 900;
+    padding: 2rem 0rem;
+}
+
+
+.inspiration4 h3{
+    font-size: 4rem;
+    margin: 2rem;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.inspiration4 h4{
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 5rem;
+}
+
+/*FIN PARTIE INSPIRATION */
+
+
+/* PAGE NEW ACTIVITIES */
+
+.formNewActivities{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.formNewActivities select{
+    font-size: 2rem;
+    border-radius: 0.5rem;
+}
+
+.formNewActivities .buttonNew{
+    background-color: rgb(248, 225, 14);
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    color: rgba(6, 26, 139, 0.925);
+    padding: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 0.75rem;
+}
+
+/*PAGE DES RESULTATS (ANCIENNES ACTIVITES)  */
+
+.old-activities2{
+    background-color:rgba(6, 26, 139, 0.925);
+    grid-area: 2 / 1 / 3 / 2 ;
+    color:white;
+    padding: 5rem;
+}
+
+.old-activities2 h3{
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: 900;
+    padding: 2rem 0rem;
+    background: rgb(248, 225, 14);
+    color: rgba(6, 26, 139, 0.925);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0rem 5rem 2rem ;
+}
+
+
+
+.activite-done{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+}
+
+.activite-done h4{
+    font-size: 3rem;
+    margin: 8rem 1rem 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: rgb(248, 225, 14);
+    color:rgba(6, 26, 139, 0.925);
+    border-radius: 1rem;
+    padding: 0.75rem;
+    border: solid 0.3rem rgba(6, 26, 139, 0.925);
+    width: 75%;
+    text-align: center;
+}
+
+.activite-done h5{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
+    font-weight: 300;
+    background-color: white;
+    border-radius: 1rem;
+    color:rgba(6, 26, 139, 0.925);
+    padding: 0.75rem;
+}
+
+.activite-done h5:hover{
+    background-color: white;
+    color: rgba(6, 26, 139, 0.925);
+    border: solid 0.3rem rgba(6, 26, 139, 0.925);
+}
+
+
+.activite-done a:hover{
+    text-decoration: none;
+}
+
+.activite-done h6{
+    font-size: 4rem;
+    margin: 2rem 0rem;
+    font-weight: 900;
+    color:rgb(248, 225, 14);
+    border-radius: 0.75rem;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------PAGE LOGIN-------------------------------------------------------------------*/
+
+.the-form{
+    background-color: rgba(6, 26, 139, 0.925);
+    padding: 7rem 0rem;
+}
+
+
+.title-login{
+    color: rgb(248, 225, 14);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 5rem auto;
+    font-weight: bold;
+}
+
+.login-form{
+    text-align: center;
+}
+
+.login-form label{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(248, 225, 14);
+    margin: 2rem;
+}
+
+/* -------------------------------------------ADMIN --------------------------------------------------------------------------------- */
+
+.grid-admin{
+    background-color: rgba(6, 26, 139, 0.925);
+    padding: 5rem 0rem;
+}
+
+
+.grid-admin h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align:center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+}
+
+.grid-admin a:hover{
+    text-decoration:none;
+}
+
+.select-admin{
+    font-weight: 300;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin: 3rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+.select-admin:hover{
+    background-color: white;
+    font-weight: bold;
+}
+
+
+.adminCorps{
+    color:rgb(247,160,144);
+}
+.adminEsprit{
+    color:rgb(247,198,144);
+
+}
+.adminSocial{
+    color:rgb(247,228,144);
+}
+.adminArts{
+    color:rgb(168,247,144);
+}
+.adminStyle{
+    color:rgb(247,144,181);
+}
+.adminCooking{
+    color:rgb(213,144,247);
+}
+
+.adminChoice{
+    color: rgba(6, 26, 139, 0.925);
+    padding: 2rem 0rem;
+    background-color: rgb(248, 225, 14);
+}
+
+
+/* LA PAGE READ/INDEX */
+
+.intitule-admin{
+    margin: 1rem;
+}
+
+.intitule-admin h3{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.intitule-admin h4{
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+.intitule-admin td, .intitule-admin th {
+    width:20%;
+    
+}
+
+.intitule-admin a{
+    color:white
+}
+
+
+.intitule-admin a:hover{
+    color:rgb(248, 225, 14);
+    font-weight: 600;
+}
+
+.mobile-phantom{
+    display:none;
+}
+
+
+
+/* --------------------------------------------------------------ADMIN - CONFIRMATION CREATION-------------------------------------------------------------------------------------------------------- */
+
+.adminPage{
+    background-color: rgba(6, 26, 139, 0.925);
+    padding: 2rem 0rem;
+
+}
+
+.adminPage h3{
+    font-size: 2.75rem;
+    font-weight: 300;
+    margin: 2rem;
+}
+
+#buttonCreate{
+    background-color: rgb(248, 225, 14);
+    display: block;
+    color: rgba(6, 26, 139, 0.925);
+    font-weight: bolder;
+    font-size: 2.5rem;
+    border-radius: 1rem;
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.button:hover{
+    text-decoration:none;
+}
+
+
+.titleadmin1{
+    text-transform: uppercase;
+    font-size: 5.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.adminForm2{
+    padding: 5rem 0rem;
+}
+
+.adminForm2 label{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(248, 225, 14);
+    margin: 3rem 2rem;   
+}
+
+.adminForm2 input[type=text]{
+    border-radius: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+}
+
+.adminForm2 select{
+    border-radius: 0.75rem;
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+/* -------------------------------------------MEDIA QUERIES (CSS en fonction de la taille de l'écran) --------------------------------------------- */
+
+
+@media screen and (min-width: 1024px)
+{
+    #navbar-mobile{
+        display: none;
+    }
+    #navbar-desktop{
+        display: block;
+        background-color:white
+    }
+    .nav-item{
+        font-size: 1.5rem;
+    }
+    .quest form, .id2 form {
+        margin: 2rem 4rem;
+    }
+    .titleimage1 h2{
+        font-size: 5rem;
+        margin: 5rem auto;
+    }
+    
+    .footer h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .footer h4 {
+        font-style:italic;
+    }
+    
+    .footer h5 {
+        margin-top: 1.5rem;
+        font-style:italic;
+    }
+    
+    
+    .footer h6 {
+        margin-top: 2rem;
+        font-size: 0.75rem;
+    }
+
+    .id2 label{
+        font-size: 1.5rem;
+        margin: 1rem 0rem;
+        text-align: center;
+    }
+    .id2 input[type=text], .id2 input[type=password], .id2 input[type=email]{
+        border-radius: 0.5rem;
+        font-size: 1.25rem;
+        width: 50%;
+        display: block;
+        margin: 2rem auto;
+    }
+    
+/*-----------------------------PAGE D'ACCUEIL ET CONCEPT --------------------------------------------------------------------------------------- */
+    .presentation1 .puv{
+        width: 60%;    
+    }
+
+    .comp img{
+        width: 50%;
+        border-radius: 4rem;
+    }
+    .pic2 img{
+        width:50%;
+        border-radius: 2rem;
+    }
+
+/* ---------------------------------------------------PAGE FORMULAIRE---------------------------------------------------------------- */
+
+    .quest input[type=text], .quest input[type=email], .quest input[type=password], .quest select {
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        width:75%;
+        display: block;
+    }
+
+
+
+    .id2 input[type=color]{
+        border-radius: 0.5rem;
+        width: 50%;
+        height: 5rem;
+        display:block;
+        margin: 2rem auto;
+    }
+
+    .quest input[type=submit], .id2 input[type=submit] {
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        max-width:30%;
+        margin: 5rem auto;
+    }
+    .label5item input[type=radio], .label5item input[type=checkbox] {
+        height: 1.25rem;
+        width: 1.25rem;
+        position: absolute;
+        top: 0.2rem;
+        left: -3rem;
+    }
+    .titleimage1 img {
+        max-width: 50%;
+        display: block;
+        margin: 1rem auto 2rem;
+        max-height: 15rem;
+    }
+    .thequestion {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 5rem;
+        font-weight: bold;
+    }
+    .label5item {
+        font-size: 1rem;
+        color: rgba(6, 26, 139, 0.925);
+        font-weight: bold;
+        margin: 1.75rem 1rem 2rem 8rem;
+        position: relative;
+    }
+    .bonus label {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        margin: 3rem 2rem;
+    }
+
+    /*MEDIA QUERIES POUR LA PAGE RESULTS  */
+    #result-title {
+        font-size: 4rem;
+        margin: 5rem auto 1rem;
+    }
+    .titleimage1 h3{
+        font-size: 2rem;
+        margin: 5rem auto 3rem;
+    }
+    .aspiration{
+        font-size: 5rem;
+        margin: 0rem 2rem;
+    }
+    .skill{
+        color: white;
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .skill h4{
+        font-size: 7em;
+    }
+    .archetype img{
+        margin: 2rem auto;
+        width: 50%;
+    }
+    .archetype h3 {
+        font-size: 3rem;
+    }
+    .archetype p {
+        font-size: 1.5rem;
+    }
+    .archetype h4{
+        margin: 5.5rem auto 3rem;
+        font-size: 2.5rem;
+    }
+    .archetype h6 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 1.5rem 0.5rem;
+    }
+    #start-button{
+        font-size: 5rem;
+    }
+    .souscategorie h5, .souscategorie h6 {
+        font-size: 2rem;
+    }
+/*MEDIA QUERIES POUR LA PAGE USER-HERO */
+    .progression1 h1, .new1 h1{
+        margin-top: 2rem;
+        font-size: 10rem;
+    }
+    .stats h2{
+        font-size: 3rem;
+    }
+    .stats h3{
+        font-size: 2.5rem;
+    }
+    
+    .stats h4{
+        font-size: 2rem;
+    }
+    .competence{
+        margin: 7rem auto 3rem;
+    }
+    
+    .jauge{
+        margin: 2rem 15rem 2rem 17rem;
+    }
+    .moins{
+        left:10rem;
+    }
+    .plus{
+        left: 66rem;
+    }
+    .detail-visible, .choixActivite{
+        background-color: white;
+        border-radius: 2rem;
+        margin: 4rem 17rem;
+        border: rgb(248, 225, 14) 0.5rem solid;
+        display:block;    /* ACTIVER GRACE A UNE FONCTION DANS LE FICHIER JS: myhero.js */
+      }
+      .detail-visible h3{
+        font-size: 2rem;
+        margin: 2rem auto 5rem;
+    }
+    .element-detail{
+        margin: 1rem 10rem 1rem 10rem;
+    }
+    .element-detail h4{
+        font-size: 2rem;
+    }
+    .element-detail h5{
+        font-size: 2rem;
+    }
+    .element-detail h6{
+        font-size: 1rem;
+        border-radius: 1rem;
+        margin: 0rem;
+        padding: 0.75rem;
+    }
+    
+    .preferences h4{
+        font-size: 2rem;
+    }
+
+
+
+
+
+    .activites2 h2{
+        font-size: 6rem;
+    }
+    
+    .activites2 h3, .old-activities3 h3{
+        font-size: 3rem;
+    }
+
+    .activite{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0rem;
+    }
+
+
+    .activite h4, .last-results h4{
+        font-size: 2rem;
+        margin: 1rem;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 0.75rem;
+        border: solid 0.3rem rgba(6, 26, 139, 0.925);
+        cursor: pointer;
+        width: 30%;
+        
+    }
+
+    
+    .activite h5, .last-results h5{
+        font-size: 1.5rem;
+        margin:1rem;
+    }
+    
+    .activite select, .last-results h6{
+        font-size: 2rem;
+    }
+
+
+    .form-note{
+        display: block;
+        width: 18%;
+    }
+    .inspiration4 h2{
+        font-size: 6rem;
+    }
+    .inspiration4 h3{
+        font-size: 3rem;
+    }
+    .inspiration4 h4{
+        font-size: 2rem;
+    }
+
+    /*MEDIA QUERIES PAGE RESULTATS */
+    .activite-done{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0rem;
+    }
+    .activite-done h4{
+        margin: 0rem 1rem 0rem;
+    }
+    .activite-done h5 {
+        font-size: 2rem;
+    }
+
+
+    /* MEDIA QUERIES POUR LA PAGE LOGIN */
+    .the-form{
+        padding: 1rem 0rem;
+    }
+    .title-login{
+        font-size: 4rem;
+        margin: 2.5rem auto;
+    }
+    .login-form label {
+        font-size: 1.5rem;
+        margin: 3rem 0rem;
+        display: block;
+        text-align: center;
+    }
+    .login-form input[type=email], .login-form input[type=password] {
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        width: 50%;
+        display: block;
+        margin: 1rem auto;
+    }
+    .login-form input[type=submit] {
+        background-color: rgb(248, 225, 14);
+        display: block;
+        color: rgba(6, 26, 139, 0.925);
+        font-weight: bolder;
+        font-size: 2rem;
+        border-radius: 1rem;
+        width: 20%;
+        margin: 0rem auto 5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    /* MEDIA QUERIES ADMIN */
+    .grid-admin{
+        padding: 2rem 0rem;
+    }
+    .adminPage h3{
+        font-size: 1.75rem;
+    }
+    .mobile-phantom{
+        display:block;
+    }
+    .adminForm2 input[type=text]{
+        border-radius: 0.75rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: block;
+        width: 50%;
+        margin: 1.5rem auto;
+    }
+    .adminForm2 label{
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .adminForm2 select {
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        width: 75%;
+        display: block;
+        margin: 2rem auto;
+    }
+    .champText{
+        width: 75%;
+        height:15rem;
+        padding: 0.35rem;
+        border-radius: 0.5rem;
+        margin: 2rem auto;
+    }
+}
+
+
+#invisibleId{                                          
+    display: none;
+    color:blue;                         
+}

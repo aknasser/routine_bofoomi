@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/myhero.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    <title>Ton Epopée - En avant</title>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar-desktop">
+            <ul class="navbar-nav nav-fill w-100">
+                <li class="nav-item"><a href="/users/hero/<%= currentUser.id %>"><%= currentUser.prenom %></a></li>
+                <li class="nav-item"><a href="/users/resultats/<%= currentUser.id %>">Resultats</a></li>
+                <li class="nav-item nav-connexion"><a href="/users/logout">Se déconnecter</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-light navbar-1 white fixed-top" id="navbar-mobile">
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/" id="NavTitre">TO BUILD A HERO</a>
+          
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#ExplosionMenu"
+              aria-controls="ExplosionMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon" id="buttonToggle"></span></button>
+          
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="ExplosionMenu">
+          
+              <!-- Links -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Résultats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Se déconnecter</a>
+                </li>
+              </ul>
+              <!-- Links -->
+          
+            </div>
+            <!-- Collapsible content -->   
+        </nav>
+            <div class="content">
+                <%- body %>
+            </div>
+            <div class="footer">
+                <h3>To Build A Hero</h3>
+                <h4>Be better than yesterday</h4>
+                <h5>Mérignac, 33700</h5>
+                <h6>Courtesy of Nass La Menace</h6>
+            </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/js/submit.js"></script> <!--JS POUR SOUMETTRE FORMULAIRE(JQUERY)  -->
+        <script type="text/javascript" src="/js/myhero.js"></script> <!-- JS POUR LE FRONT JS  -->
+
+        </script>
+    </body>
+</html>

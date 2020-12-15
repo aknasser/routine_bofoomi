@@ -1,0 +1,54 @@
+<div class="grid-start">
+    <div class=" quest adminForm2">
+        <form action="/admin/activites/createCooking" method="POST">
+            <label>Titre
+                <input type="text" name="titre" required>
+            </label>
+            <label>Description
+                <textarea type="textarea" class="champText" name="description" required></textarea>
+            </label>
+            <label>Sous-categorie
+                <select name="sousCategorie">
+                    <option value="healthy">Healthy</option>
+                    <option value="classic">Classic</option>
+                    <option value="decouverte">Decouverte</option>
+                    <option value="plaisir">Plaisir</option>
+                </select>
+            </label>
+            <label>Difficulté
+                <input type="text" name="difficulte" required>
+            </label>
+            <label>%Healthy
+                <input type="text" name="pourcentageHealthy" required>
+            </label>
+            <label>%Classic
+                <input type="text" name="pourcentageClassic" required>
+            </label>
+            <label>%Decouverte
+                <input type="text" name="pourcentageDecouverte" required>
+            </label>
+            <label>%Plaisir
+                <input type="text" name="pourcentagePlaisir" required>
+            </label>
+            <label>Prérequis F
+                <input type="text" name="prerequisF" required>
+            </label>
+            <label>Prérequis D
+                <input type="text" name="prerequisD" required>
+            </label>
+            <label>Prérequis C
+                <input type="text" name="prerequisC" required>
+            </label>
+            <label>Prérequis B
+                <input type="text" name="prerequisB" required>
+            </label>
+            <label>Prérequis A
+                <input type="text" name="prerequisA" required>
+            </label>
+            <label>Prérequis S
+                <input type="text" name="prerequisS" required>
+            </label>
+            <input id="buttonCreate" type="submit" value="CREER">
+        </form>
+    </div>
+</div>

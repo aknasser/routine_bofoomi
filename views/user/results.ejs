@@ -1,0 +1,251 @@
+<div class="grid-results">
+    <div class="titleimage1">
+        <h2 id="result-title">Le début d'une belle épopée...</h2>
+        <h3>Découvre tes stats et bonus de départ !</h3>
+    </div>
+    <div class="pointsCorps1">
+       <h3 class="aspiration">CORPS</h3>
+       <div class="skill">
+           <h4><%= utilisateur.corps.scoreCorps.toFixed(1) %></h4> <!--user.corps.scoreCorps-->
+           <div class="detail-skill">
+                <div class="souscategorie">
+                    <h5><%= utilisateur.corps.scorePuissance.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                    <h6>Puissance</h6>
+                </div>
+                <div class="souscategorie">
+                    <h5><%= utilisateur.corps.scoreSouplesse.toFixed(1) %></h5> <!--user.corps.scoreSouplesse-->
+                    <h6>Souplesse</h6>
+                </div>
+                <div class="souscategorie">
+                    <h5><%= utilisateur.corps.scoreTechnique.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                    <h6>Technique</h6>
+                </div>
+                <div class="souscategorie">
+                    <h5><%= utilisateur.corps.scoreSante.toFixed(1) %></h5> <!--user.corps.scoreSante-->
+                    <h6>Maintien</h6>
+                </div>
+           </div>   
+       </div>
+       <div class="archetype">
+            <div class="details-aspiration">
+                <h3><%= objectifCorps.titre %></h3>      <!--aspirationCorps.titre-->
+                <p><%= objectifCorps.description %></p> <!--aspirationCorps.description-->
+                <img src="<%=`/images/aspirationCorps/${objectifCorps.image}.png`%>" alt=""> <!--aspirationCorps.image-->
+                <h4><%= objectifCorps.bonusNom %></h4>  <!--aspirationCorps.bonusNom-->
+                <h6>x<span class="multiplicateur"><%= objectifCorps.multiplicateurPuissance %></span>pts d'expérience pour les actions  <span class="actionName">"Puissance"</span></h6>
+                <h6>x<span class="multiplicateur"><%= objectifCorps.multiplicateurTechnique %></span>pts d'expérience pour les actions  <span class="actionName">"Technique"</span></h6> 
+                <h6>x<span class="multiplicateur"><%= objectifCorps.multiplicateurSouplesse %></span>pts d'expérience pour les actions  <span class="actionName">"Souplesse"</span></h6>
+                <h6>x<span class="multiplicateur"><%= objectifCorps.multiplicateurSante %></span>pts d'expérience pour les actions  <span class="actionName">"Sante"</span></h6> 
+ 
+
+                  <!--aspirationCorps.multiplicateurPuissance-->
+            </div>
+        </div>
+        <div class="validation">
+            
+        </div>
+    </div>
+
+    <div class="pointsEsprit2">
+        <h3 class="aspiration">ESPRIT</h3>
+        <div class="skill">
+            <h4><%= utilisateur.esprit.scoreEsprit.toFixed(1) %></h4> <!--user.corps.scoreCorps-->
+            <div class="detail-skill">
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.esprit.scoreHardSkills.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                     <h6>Hard Skills</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.esprit.scoreSoul.toFixed(1) %></h5> <!--user.corps.scoreSouplesse-->
+                     <h6>Soul</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.esprit.scoreCrafty.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                     <h6>Crafty</h6>
+                 </div>
+
+            </div>   
+        </div>
+        <div class="archetype">
+             <img src="<%=`/images/aspirationEsprit/${objectifEsprit.image}.png`%>" alt=""> <!--aspirationCorps.image-->
+             <div class="details-aspiration">
+                 <h3><%= objectifEsprit.titre %></h3>      <!--aspirationCorps.titre-->
+                 <p><%= objectifEsprit.description %></p> <!--aspirationCorps.description-->
+                 <h4><%= objectifEsprit.bonusNom %></h4>  <!--aspirationCorps.bonusNom-->
+                 <h6>x<span class="multiplicateur"><%= objectifEsprit.multiplicateurHardSkills %></span>pts d'expérience pour les actions  <span class="actionName">"Soul"</span></h6>
+                 <h6>x<span class="multiplicateur"><%= objectifEsprit.multiplicateurSoul %></span>pts d'expérience pour les actions  <span class="actionName">"Expertise"</span></h6> 
+                 <h6>x<span class="multiplicateur"><%= objectifEsprit.multiplicateurCrafty %></span>pts d'expérience pour les actions  <span class="actionName">"Sens Pratique"</span></h6>
+  
+ 
+                   <!--aspirationCorps.multiplicateurPuissance-->
+             </div>
+         </div>
+         <div class="validation">
+             
+         </div>
+    </div>
+
+
+    <div class="pointsSocial3">
+        <h3 class="aspiration">SOCIAL</h3>
+        <div class="skill">
+            <h4><%= utilisateur.social.scoreSocial.toFixed(1) %></h4> <!--user.corps.scoreCorps-->
+            <div class="detail-skill">
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.social.scorePotes.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                     <h6>Liens</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.social.scoreAventure.toFixed(1) %></h5> <!--user.corps.scoreSouplesse-->
+                     <h6>Aventure</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.social.scoreCharisma.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                     <h6>Charisme</h6>
+                 </div>
+            </div>   
+        </div>
+        <div class="archetype">
+             <img src="<%=`/images/aspirationSocial/${objectifSocial.image}.png`%>" alt=""> <!--aspirationCorps.image-->
+             <div class="details-aspiration">
+                 <h3><%= objectifSocial.titre %></h3>      <!--aspirationCorps.titre-->
+                 <p><%= objectifSocial.description %></p> <!--aspirationCorps.description-->
+                 <h4><%= objectifSocial.bonusNom %></h4>  <!--aspirationCorps.bonusNom-->
+                 <h6>x<span class="multiplicateur"><%= objectifSocial.multiplicateurPotes %></span>pts d'expérience pour les actions  <span class="actionName">"Liens"</span></h6>
+                 <h6>x<span class="multiplicateur"><%= objectifSocial.multiplicateurAventure %></span>pts d'expérience pour les actions  <span class="actionName">"Aventure"</span></h6> 
+                 <h6>x<span class="multiplicateur"><%= objectifSocial.multiplicateurCharisma %></span>pts d'expérience pour les actions  <span class="actionName">"Prestance"</span></h6>
+  
+ 
+                   <!--aspirationCorps.multiplicateurPuissance-->
+             </div>
+         </div>
+         <div class="validation">
+             
+         </div>
+    </div>
+
+    <div class="pointsArts4">
+        <h3 class="aspiration">ARTS</h3>
+        <div class="skill">
+            <h4><%= utilisateur.arts.scoreArts.toFixed(1) %></h4> <!--user.corps.scoreCorps-->
+            <div class="detail-skill">
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.arts.scorePractice.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                     <h6>Pratique Artistique</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.arts.scoreCulture.toFixed(1) %></h5> <!--user.corps.scoreSouplesse-->
+                     <h6>Culture</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.arts.scoreExpressivite.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                     <h6>Expressivité</h6>
+                 </div>
+            </div>   
+        </div>
+        <div class="archetype">
+             <img src="<%=`/images/aspirationArts/${objectifArts.image}.png`%>" alt=""> <!--aspirationCorps.image-->
+             <div class="details-aspiration">
+                 <h3><%= objectifArts.titre %></h3>      <!--aspirationCorps.titre-->
+                 <p><%= objectifArts.description %></p> <!--aspirationCorps.description-->
+                 <h4><%= objectifArts.bonusNom %></h4>  <!--aspirationCorps.bonusNom-->
+                 <h6>x<span class="multiplicateur"><%= objectifArts.multiplicateurArts %></span>pts d'expérience pour les actions  <span class="actionName">"Pratique"</span></h6>
+                 <h6>x<span class="multiplicateur"><%= objectifArts.multiplicateurCulture %></span>pts d'expérience pour les actions  <span class="actionName">"Culture"</span></h6> 
+                 <h6>x<span class="multiplicateur"><%= objectifArts.multiplicateurExpressivite %></span>pts d'expérience pour les actions  <span class="actionName">"Expressivité"</span></h6>
+  
+ 
+                   <!--aspirationCorps.multiplicateurPuissance-->
+             </div>
+         </div>
+         <div class="validation">
+             
+         </div>
+    </div>
+
+
+    <div class="pointsStyle5">
+        <h3 class="aspiration">STYLE</h3>
+        <div class="skill">
+            <h4><%= utilisateur.style.scoreStyle.toFixed(1) %></h4> <!--user.corps.scoreCorps-->
+            <div class="detail-skill">
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.style.scoreColorful.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                     <h6>Colorful</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.style.scoreClassy.toFixed(1) %></h5> <!--user.corps.scoreSouplesse-->
+                     <h6>Classy</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.style.scoreSimple.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                     <h6>Basic Style</h6>
+                 </div>
+            </div>   
+        </div>
+        <div class="archetype">
+             <img src="<%=`/images/aspirationStyle/${objectifStyle.image}.png`%>" alt=""> <!--aspirationCorps.image-->
+             <div class="details-aspiration">
+                 <h3><%= objectifStyle.titre %></h3>      <!--aspirationCorps.titre-->
+                 <p><%= objectifStyle.description %></p> <!--aspirationCorps.description-->
+                 <h4><%= objectifStyle.bonusNom %></h4>  <!--aspirationCorps.bonusNom-->
+                 <h6>x<span class="multiplicateur"><%= objectifStyle.multiplicateurOriginal %></span>pts d'expérience pour les actions  <span class="actionName">"Colorful"</span></h6>
+                 <h6>x<span class="multiplicateur"><%= objectifStyle.multiplicateurElegance %></span>pts d'expérience pour les actions  <span class="actionName">"Stylish"</span></h6> 
+                 <h6>x<span class="multiplicateur"><%= objectifStyle.multiplicateurBasic %></span>pts d'expérience pour les actions  <span class="actionName">"Basic Style"</span></h6>
+  
+ 
+                   <!--aspirationCorps.multiplicateurPuissance-->
+             </div>
+         </div>
+         <div class="validation">
+             
+         </div>
+    </div>
+
+
+    <div class="pointsCooking6">
+        <h3 class="aspiration">COOKING</h3>
+        <div class="skill">
+            <h4><%= utilisateur.cooking.scoreCooking.toFixed(1) %></h4> <!--user.corps.scoreCorps-->
+            <div class="detail-skill">
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.cooking.scoreHealthy.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                     <h6>Alimentation Saine</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.cooking.scoreClassic.toFixed(1) %></h5> <!--user.corps.scoreSouplesse-->
+                     <h6>Amour du Terroir</h6>
+                 </div>
+                 <div class="souscategorie">
+                     <h5><%= utilisateur.cooking.scoreDecouverte.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                     <h6>Exploration</h6>
+                 </div>
+                 <div class="souscategorie">
+                    <h5><%= utilisateur.cooking.scorePlaisir.toFixed(1) %></h5> <!--user.corps.scoreTechnique-->
+                    <h6>Gourmandise</h6>
+                </div>
+            </div>   
+        </div>
+        <div class="archetype">
+             <img src="<%=`/images/aspirationCooking/${objectifCooking.image}.png`%>" alt=""> <!--aspirationCorps.image-->
+             <div class="details-aspiration">
+                 <h3><%= objectifCooking.titre %></h3>      <!--aspirationCorps.titre-->
+                 <p><%= objectifCooking.description %></p> <!--aspirationCorps.description-->
+                 <h4><%= objectifCooking.bonusNom %></h4>  <!--aspirationCorps.bonusNom-->
+                 <h6>x<span class="multiplicateur"><%= objectifCooking.multiplicateurHealthy %></span>pts d'expérience pour les actions  <span class="actionName">"Alimentation Saine"</span></h6>
+                 <h6>x<span class="multiplicateur"><%= objectifCooking.multiplicateurClassic %></span>pts d'expérience pour les actions  <span class="actionName">"Amour du Terroir"</span></h6> 
+                 <h6>x<span class="multiplicateur"><%= objectifCooking.multiplicateurDecouverte %></span>pts d'expérience pour les actions  <span class="actionName">"Découverte"</span></h6>
+                 <h6>x<span class="multiplicateur"><%= objectifCooking.multiplicateurPlaisir %></span>pts d'expérience pour les actions  <span class="actionName">"Gourmandise"</span></h6>
+
+
+ 
+                   <!--aspirationCorps.multiplicateurPuissance-->
+             </div>
+         </div>
+         <div class="validation">
+            <a href="/users/login" id="start-button">Let's Go</a>  
+         </div>
+    </div>
+
+
+
+</div>

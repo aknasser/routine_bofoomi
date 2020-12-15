@@ -1,0 +1,231 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2>Arts</h2>
+        <img src="/images/questionnaire/paint.png" alt="une jolie peinture">
+    </div>
+    <div class="quest arts2">
+        <form action="/users/create/arts" method="POST">
+            <div class="qcm">
+                <input id="invisibleId" type="text" name="id" value="<%= id %>">        <!--L'invisible ID pour passer l'id de page en page-->
+
+                <h3 class="thequestion">Combien de livres lis-tu par mois ? (romans, essais, BDs, mangas)</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">3 et +
+                            <input type="radio" name="lecture" value="5" required>
+                        </label>
+                        <label class="label5item">2
+                            <input type="radio" name="lecture" value="4">
+                        </label>
+                        <label class="label5item">1
+                            <input type="radio" name="lecture" value="3">
+                        </label>
+                        <label class="label5item">1 tous les 2 mois
+                            <input type="radio" name="lecture" value="2">
+                        </label>
+                        <label class="label5item">Jamais
+                            <input type="radio" name="lecture" value="1">
+                        </label>
+                    </div>
+            </div>
+            <div class="qcm">
+                <h3 class="thequestion">Combien d'expos vois-tu par an ?</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">Plus de 5
+                            <input type="radio" name="expo" value="5" required>
+                        </label>
+                        <label class="label5item">2 - 5
+                            <input type="radio" name="expo" value="4">
+                        </label>
+                        <label class="label5item">1
+                            <input type="radio" name="expo" value="3">
+                        </label>
+                        <label class="label5item">Moins d'1
+                            <input type="radio" name="expo" value="2">
+                        </label>
+                        <label class="label5item">Aucune
+                            <input type="radio" name="expo" value="1">
+                        </label>
+                    </div>
+            </div>
+            <div class="qcm">
+                <h3 class="thequestion">Combien de fois vas-tu au cinéma par mois ? (Hors Covid-19)</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">3 et plus
+                            <input type="radio" name="cinema" value="5" required>
+                        </label>
+                        <label class="label5item">2
+                            <input type="radio" name="cinema" value="4">
+                        </label>
+                        <label class="label5item">1 
+                            <input type="radio" name="cinema" value="3">
+                        </label>
+                        <label class="label5item">moins d'1 fois par mois
+                            <input type="radio" name="cinema" value="2">
+                        </label>
+                        <label class="label5item">quasiment jamais
+                            <input type="radio" name="cinema" value="1">
+                        </label>
+                    </div>
+            </div>
+            <div class="qcm">
+                <h3 class="thequestion">Par semaine, combien de fois pratiques-tu une activité artistique ?(musique, dessin, écriture)</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">Tous les jours
+                            <input type="radio" name="activiteArtistique" value="5" required>
+                        </label>
+                        <label class="label5item">2 fois par semaine
+                            <input type="radio" name="activiteArtistique" value="4">
+                        </label>
+                        <label class="label5item">1 fois par semaine
+                            <input type="radio" name="activiteArtistique" value="3">
+                        </label>
+                        <label class="label5item">Quand tu as le temps
+                            <input type="radio" name="activiteArtistique" value="2">
+                        </label>
+                        <label class="label5item">Jamais
+                            <input type="radio" name="activiteArtistique" value="1">
+                        </label>
+                    </div>
+            </div>
+
+            <div class="qcm">
+                <h3 class="thequestion">Pratiquer ton/tes disciplines artistiques, c'est...</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">Vital. Tout simplement
+                            <input type="radio" name="plaisirArts" value="5" required>
+                        </label>
+                        <label class="label5item">Un plaisir
+                            <input type="radio" name="plaisirArts" value="4">
+                        </label>
+                        <label class="label5item">Un passe-temps agréable
+                            <input type="radio" name="plaisirArts" value="3">
+                        </label>
+                        <label class="label5item">Couci-couça
+                            <input type="radio" name="plaisirArts" value="2">
+                        </label>
+                        <label class="label5item">Souvent barbant
+                            <input type="radio" name="plaisirArts" value="1">
+                        </label>
+                    </div>
+            </div>
+
+
+            <div class="qcm">
+                <h3 class="thequestion"> Pour toi, exercer ton art, c'est avant tout...</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item"> un  moment de communion avec les autres
+                            <input type="radio" name="moment" value="5" required>
+                        </label>
+                        <label class="label5item">un moyen d'amuser/toucher autrui.
+                            <input type="radio" name="moment" value="4">
+                        </label>
+                        <label class="label5item"> une bonne distraction
+                            <input type="radio" name="moment" value="3">
+                        </label>
+                        <label class="label5item">un moyen de se recentrer, s'apaiser
+                            <input type="radio" name="moment" value="2">
+                        </label>
+                        <label class="label5item"> Un moment intime et secret
+                            <input type="radio" name="moment" value="1">
+                        </label>
+                    </div>
+            </div>
+
+
+            
+            <div class="qcm">
+                <h3 class="thequestion">Showman: présenter tes créations artistiques aux autres, c'est...</h3>
+                    <div class="multiradio-form">
+                        <label class="label5item">Le kif ultime
+                            <input type="radio" name="showman" value="5" required>
+                        </label>
+                        <label class="label5item">C'est plutôt grisant
+                            <input type="radio" name="showman" value="4">
+                        </label>
+                        <label class="label5item">Pas mal.
+                            <input type="radio" name="showman" value="3">
+                        </label>
+                        <label class="label5item">Assez stressant
+                            <input type="radio" name="showman" value="2">
+                        </label>
+                        <label class="label5item">Une torture
+                            <input type="radio" name="showman" value="1">
+                        </label>
+                    </div>
+            </div>
+
+
+            <div class="bonus"> 
+                <label>Ton Activité Artistique N°1 ?
+                    <select name="artFavori1">
+                        <option class="groupe-option">Musique</option>
+                        <% for(let i = 0; i < musique.length; i++) { %>
+                            <option value="<%= musique[i] %>"><%= musique[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Littérature</option>
+                        <% for(let i = 0; i < litterature.length; i++) { %>
+                            <option value="<%= litterature[i] %>"><%= litterature[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Arts Visuels</option>
+                        <% for(let i = 0; i < artsVisuels.length; i++) { %>
+                            <option value="<%= artsVisuels[i] %>"><%= artsVisuels[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Arts de la Scène</option>
+                        <% for(let i = 0; i < artsScene.length; i++) { %>
+                            <option value="<%= artsScene[i] %>"><%= artsScene[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Vidéo & Photo</option>
+                        <% for(let i = 0; i < videoPhoto.length; i++) { %>
+                            <option value="<%= videoPhoto[i] %>"><%= videoPhoto[i] %></option>
+                        <% }; %>
+                    </select>
+                </label>
+
+                <label>Ton Activité Artistique N°2 ?
+                    <select name="artFavori2">
+                        <option class="groupe-option">Musique</option>
+                        <% for(let i = 0; i < musique.length; i++) { %>
+                            <option value="<%= musique[i] %>"><%= musique[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Littérature</option>
+                        <% for(let i = 0; i < litterature.length; i++) { %>
+                            <option value="<%= litterature[i] %>"><%= litterature[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Arts Visuels</option>
+                        <% for(let i = 0; i < artsVisuels.length; i++) { %>
+                            <option value="<%= artsVisuels[i] %>"><%= artsVisuels[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Arts de la Scène</option>
+                        <% for(let i = 0; i < artsScene.length; i++) { %>
+                            <option value="<%= artsScene[i] %>"><%= artsScene[i] %></option>
+                        <% }; %>
+                        <option class="groupe-option">Vidéo & Photo</option>
+                        <% for(let i = 0; i < videoPhoto.length; i++) { %>
+                            <option value="<%= videoPhoto[i] %>"><%= videoPhoto[i] %></option>
+                        <% }; %>
+                    </select>
+                </label>
+            </div>
+    
+            <div class="qcm">
+                <h3 class="thequestion">Un jour, tu seras(arts)...</h3>
+                    <div class="multiradio-form aspiration">
+                        <label class="label5item"> Un Virtuose
+                            <input type="radio" name="aspirationArts" value="La Voie du Virtuose" required>
+                        </label>
+                        <label class="label5item"> Un Concentré de Culture.
+                            <input type="radio" name="aspirationArts" value="La Voie du Connaisseur">
+                        </label>
+                        <label class="label5item"> Un Performer
+                            <input type="radio" name="aspirationArts" value="La Voie du Performeur">
+                        </label>
+                    </div>
+            </div>
+
+
+
+            <input class="button" type="submit" value="SUIVANT">
+        </form>
+
+    </div>
+</div>

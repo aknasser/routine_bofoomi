@@ -1,0 +1,26 @@
+<div class="grid-admin">
+    <h2>Les Activités Disponibles</h2>
+        <table class="intitule-admin">
+            <thead>
+                <tr>
+                    <th><h3>Titre</h3></th>
+                    <th class="mobile-phantom"><h3>Sous-Catégorie</h3></th>
+                    <th><h3>Points d'Exp</h3></th>
+                    <th><h3></h3></th>
+                    <th><h3></h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% activite.forEach(defi => { %>
+                    <tr>
+                        <td><h4><%= defi.titre %></h4></td>
+                        <td class="mobile-phantom"><h4><%= defi.sousCategorie %></h4></td>
+                        <td><h4><%= defi.totalPtsExp %></h4></td>
+                        <td><a href=" <%= ` /admin/activites/${defi._id}/${defi.categorie}/update/edit${defi.categorie}` %> ">Modifier</a></td>
+                        <td><a href=" <%= ` /admin/activites/${defi._id}/${defi.categorie}/delete?_method=DELETE` %> ">Supprimer</a></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+</div>
+
