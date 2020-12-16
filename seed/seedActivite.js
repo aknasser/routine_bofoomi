@@ -24,7 +24,7 @@ const scienceSociale = require("./scienceSociale");
 
 
 mongoose.connect(
-    "mongodb://localhost:27017/me_hero",
+    process.env.MONGODB_URI || "mongodb://localhost:27017/me_hero",
     {useNewUrlParser: true} 
 );
 
