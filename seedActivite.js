@@ -5,21 +5,21 @@ const mongoose = require("mongoose");
 
 
 // POUR LA VUE START-BODY
-const sportCo = require("./sportCollectif")
-const sportIndiv = require("./sportIndividuel"); 
+const sportCo = require("./models/preferenceUser/sportCollectif")
+const sportIndiv = require("./models/preferenceUser/sportIndividuel"); 
 
 // POUR LA VUE START-ART
-const musique = require("./musique");
-const litterature = require("./litterature");
-const artsvisuels = require("./artsvisuels");
-const artsScene = require("./artsScene");
-const videophoto = require("./videophoto");
+const musique = require("./models/preferenceUser/musique");
+const litterature = require("./models/preferenceUser/litterature");
+const artsvisuels = require("./models/preferenceUser/artsvisuels");
+const artsScene = require("./models/preferenceUser/artsScene");
+const videophoto = require("./models/preferenceUser/videophoto");
 
 // POUR LA VUE START-MIND
-const caractere = require("./caractere");
-const artisanat = require("./artisanat");
-const sciencePure = require("./sciencePure");
-const scienceSociale = require("./scienceSociale");
+const caractere = require("./models/preferenceUser/caractere");
+const artisanat = require("./models/preferenceUser/artisanat");
+const sciencePure = require("./models/preferenceUser/sciencePure");
+const scienceSociale = require("./models/preferenceUser/scienceSociale");
 
 
 
