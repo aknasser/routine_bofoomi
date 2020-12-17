@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="/css/myhero.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
 
     <title>Libère ton potentiel héroïque</title>
     <body>
             <nav class="navbar navbar-expand-lg fixed-top" id="navbar-desktop">
                 <ul class="navbar-nav nav-fill w-100">
-                    <li class="nav-item"><a href="/">Accueil</a></li>
                     <li class="nav-item"><a href="/start">Deviens un Héros</a></li>
                     <li class="nav-item"><a href="/concept">Le Concept</a></li>
                     <li class="nav-item nav-connexion"><a href="/users/login">Connexion</a></li>
@@ -20,7 +21,7 @@
             <nav class="navbar navbar-light navbar-1 white fixed-top" id="navbar-mobile">
 
                 <!-- Navbar brand -->
-                <a class="navbar-brand" href="/" id="NavTitre">TO BUILD A HERO</a>
+                <a class="navbar-brand" href="/" id="NavTitre">BoFooMi</a>
               
                 <!-- Collapse button -->
                 <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#ExplosionMenu"
@@ -31,17 +32,14 @@
               
                   <!-- Links -->
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/start">Deviens un Héros</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/start">Deviens un Héros</a>
+                      <a class="nav-link" id="BoutonConcept" href="/concept">Le Concept</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/concept">Le Concept</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link nav-connexion" href="/users/login">Connexion</a>
+                      <a class="nav-link nav-connexion" id="BoutonConnexion" href="/users/login">Connexion</a>
                     </li>
                   </ul>
                   <!-- Links -->
@@ -55,15 +53,15 @@
                 <%- body %>
             </div>
             <div class="footer">
-                <h3>To Build A Hero</h3>
+                <h3>BoFooMi</h3>
                 <h4>Be better than yesterday</h4>
                 <h5>Mérignac, 33700</h5>
                 <h6>Courtesy of Nass La Menace</h6>
             </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/js/submit.js"></script> <!--JS POUR SOUMETTRE FORMULAIRE(JQUERY)  -->
         <script type="text/javascript" src="/js/myhero.js"></script> <!-- JS POUR LE FRONT JS  -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
         </script>
     </body>
