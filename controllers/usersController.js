@@ -711,7 +711,7 @@ module.exports = {
         .then (activiteCorps => {     
             userActif.activitesCorps = activiteCorps;                                        // 6 - L'attribuer à l'user dans son ActivitesCorps.
             console.log(`Nouvelle Activité Corps:${activiteCorps}`);
-            res.locals.redirect = "/users/hero"
+            res.locals.redirect = `/users/hero/${userId}`
             userActif.save();
             next();                                 
         })              
@@ -831,7 +831,7 @@ module.exports = {
         .then (activiteEsprit => {     
             userActif.activitesEsprit = activiteEsprit;                                        // 6 - L'attribuer à l'user dans son activitesEsprit.
             console.log(`Nouvelle Activité Esprit:${activiteEsprit}`);
-            res.locals.redirect = "/users/hero"
+            res.locals.redirect = `/users/hero/${userId}`
             userActif.save();
             next();                                 
         })              
@@ -948,7 +948,7 @@ module.exports = {
         .then (activiteSocial => {     
             userActif.activitesSocial = activiteSocial;                                        // 6 - L'attribuer à l'user dans son ActivitesSocial.
             console.log(`Nouvelle Activité Social:${activiteSocial}`);
-            res.locals.redirect = "/users/hero"
+            res.locals.redirect = `/users/hero/${userId}`
             userActif.save();
             next();                                 
         })              
@@ -1069,7 +1069,7 @@ module.exports = {
         .then (activiteArts => {     
             userActif.activitesArts = activiteArts;                                        // 6 - L'attribuer à l'user dans son ActivitesArts.
             console.log(`Nouvelle Activité Arts:${activiteArts}`);
-            res.locals.redirect = "/users/hero"
+            res.locals.redirect = `/users/hero/${userId}`
             userActif.save();
             next();                                 
         })              
@@ -1194,7 +1194,7 @@ module.exports = {
         .then (activiteStyle => {     
             userActif.activitesStyle = activiteStyle;                                        // 6 - L'attribuer à l'user dans son ActivitesStyle.
             console.log(`Nouvelle Activité Style:${activiteStyle}`);
-            res.locals.redirect = "/users/hero"
+            res.locals.redirect = `/users/hero/${userId}`
             userActif.save();
             next();                                 
         })              
@@ -1319,7 +1319,7 @@ module.exports = {
         .then (activiteCooking => {     
             userActif.activitesCooking = activiteCooking;                                        // 6 - L'attribuer à l'user dans son ActivitesCooking.
             console.log(`Nouvelle Activité Cooking:${activiteCooking}`);
-            res.locals.redirect = "/users/hero"
+            res.locals.redirect = `/users/hero/${userId}`
             userActif.save();
             next();                                 
         })              
@@ -1331,7 +1331,7 @@ module.exports = {
     activitesIndex: (req, res) => {
         res.render("user/oldActivities/activiteIndex", {
             layout:"layoutUser",
-            userId: req.params.id
+            id: req.params.id
         })
     },
     OldActivities: (req, res) => {          
@@ -1345,6 +1345,7 @@ module.exports = {
             console.log(oldActivities);
             res.render("user/oldActivities/index", {
                 layout:"layoutUser",
+                id: req.params.id,
                 activitesPassees: oldActivities   // 7 - activitePassees est la variable local contenant les valeurs d'oldActivities. Dans la vue nous n'aurons plus qu'à dégainer une boucle forEach des fafas pour plier l'affaire :) 
             });
         })
