@@ -95,10 +95,10 @@ activiteEspritSchema.virtual("voieActivite")
     let voieActivite;
     switch (this.sousCategorie) {
         case "hardSkills":
-            voieActivite = "La Voie de L'Erudit";
+            voieActivite = "La Voie de L'Expert";
             break;
         case "soul":
-            voieActivite = "La Voie de L'Expert";
+            voieActivite = "La Voie de L'Erudit";
             break;
         case "crafty":
             voieActivite = "La Voie du Rusé";
