@@ -1334,6 +1334,7 @@ module.exports = {
             id: req.params.id
         })
     },
+
     OldActivities: (req, res) => {          
         let oldActivities;                                              // 1 - ON CREE oldActivities pour récupérer plus tard l'ensemble des activités passées de l'User pour la catégorie donnée
         let userId = req.params.id                                  // 2 - On  cale l'id de l'user(présent en params dans userId). On s'en servira pour choper toutes les activités faites par l'user
