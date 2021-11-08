@@ -12,6 +12,8 @@
             <ul class="navbar-nav nav-fill w-100">
                 <li class="nav-item"><a href="/users/hero/<%= currentUser.id %>"><%= currentUser.prenom %></a></li>
                 <li class="nav-item"><a href="/users/resultats/<%= currentUser.id %>">Resultats</a></li>
+                <li class="nav-item"><a href="/betterMan">Inspiration</a></li>
+                <li class="nav-item"><a href="/bucketList/<%= currentUser.id %>">Challenges</a></li>
                 <li class="nav-item nav-connexion"><a href="/users/logout">Se déconnecter</a></li>
             </ul>
         </nav>
@@ -34,6 +36,12 @@
                 </li>
                 <li class="nav-item" id='itemResults'>
                   <a class="nav-link"  id="BoutonResultats"  href="/users/resultats/<%= currentUser.id %>">Résultats</a>
+                </li>
+                <li class="nav-item" id='itemResults'>
+                  <a class="nav-link"  id="BoutonResultats"  href="/betterMan">Inspiration</a>
+                </li>
+                <li class="nav-item" id='itemResults'>
+                  <a class="nav-link"  id="BoutonResultats"  href="/bucketList/<%= currentUser.id %>">Challenges</a>
                 </li>
                 <li class="nav-item" id="itemLogOut">
                   <a class="nav-link" id="BoutonDeconnexion"  href="/users/logout">Se déconnecter</a>

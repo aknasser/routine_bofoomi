@@ -1,0 +1,17 @@
+<div class="grid-admin">
+    <h1>BUCKET LIST</h1>
+<% for (let i = 0 ; i < challenges.length; i++) { %>
+    <h2><%= challenges[i].title %></h2>
+    <form action= "/bucketList/defisReleves/<%= currentUser.id %>/<%=challenges[i].id %>" method ="POST">
+        <div class="multiradio-form aspiration">
+    <% for (let j = 0 ; j < challenges[i].steps.length; j++) { %>
+            <label class="label5item"> <%= j + 1 %> - <%= challenges[i].steps[j] %>
+                <input type="checkbox" class ="aCocher" name="steps" value="<%= challenges[i].steps[j] %>">
+            </label>
+    <% } %>
+        </div>
+    <input class="button" id="leBouton-bucketList" type="submit" value="VALIDER">
+
+    </form>
+<% } %>  
+</div>

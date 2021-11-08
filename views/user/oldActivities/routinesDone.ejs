@@ -1,0 +1,29 @@
+    <!--LES ACTIVITES PASSEES-->
+    <div class="old-activities2">
+        <div class="encours">
+            <% if (Array.isArray(routinesPassees) && routinesPassees.length) {  %>          <!--Avec cette égalité, nous vérifions si activitesPassees est bien array et s'il contient des éléments (s'il a une "length" donc)-->
+
+            <div>
+                <canvas id = "leGraphique"></canvas>
+              </div>    
+
+            <span id = "countNotes" style = display:none><%=numberNotes %></span>
+            <h2><%=objectif.title %></h2>
+            <h3>Défis Relevés</h3>
+            <%  for(let i = routinesPassees.length -1; i > 0; i--) { %>                                 <!-- On boucle dans le sens inverse pour afficher les résultats dans l'ordre décroissant -->
+                    <div class="activite-done">
+                <% let optionsMonth = {month: "long"}; %> <!-- On créé cette variable pour pouvoir récupérer le nom entier du mois avec Intl.DateTimeFormat() -->
+                <h5><%= routinesPassees[i].createdAt.getDate()%>  <%= Intl.DateTimeFormat("en-US",optionsMonth).format(routinesPassees[i].createdAt) %> </h5>
+                <h4><%= routinesPassees[i].routine.title %></h4>  <!-- utiliser le timestamps de l'activité ici -->
+
+                <h6> <%= routinesPassees[i].gradeLetter %> </h6>
+            </div>
+            <% }; %>
+           <% } else {    %>
+            <h3>Pas de routines effectuées pour cet objectif</h3>
+         <% }  %>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="/js/graph.js"></script> <!-- JS POUR AFFICHER LE GRAPHIQUE -->
+

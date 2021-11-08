@@ -1,7 +1,6 @@
 // LES MODULES NECESSAIRES DE BASE
 
 const express = require("express");
-const layouts = require("express-ejs-layouts");
 const passport = require("passport"); 
 
 
@@ -55,7 +54,7 @@ db.once("open", () => {
 
 
 
-// PARAMETRER LE SYSTEME DE VUES
+ // PARAMETRER LE SYSTEME DE VUES
 app.set("view engine", "ejs");
 app.use(layouts);   //Ceci nous permet d'utiliser les layout. Nous l'invoquons avant de construire les routes avec les vues dynamiques
 

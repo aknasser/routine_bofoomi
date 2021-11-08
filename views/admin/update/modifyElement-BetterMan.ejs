@@ -1,0 +1,21 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2>Modifier Better Man</h2>
+    </div>
+    <div class="id2">
+        <form action="/admin/modifyElement/<%=schema %>/<%=element.id %>" method="POST">
+            <label>Title
+                <input type="text" name="title" value="<%=element.title %>" required>
+            </label>
+            <label>content
+                <input type="textarea" name="content" value="<%=element.content %>" required>
+            </label>
+            <label>Picture
+                <input type="text" name="picture" value="<%=element.picture %>" required>
+            </label>
+           
+           
+            <input class="button" type="submit" value="SUIVANT">
+        </form>
+    </div>
+</div>

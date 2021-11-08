@@ -1,0 +1,9 @@
+<div class="grid-admin">
+    <% for (let i = 0; i < items.length; i++) {  %>
+
+    <a href="admin/action/<%= items[i].nameLink %>">
+        <h2 class="select-admin"><%= items[i].title %></h2> 
+     </a>
+     
+    <% } %>
+</div>

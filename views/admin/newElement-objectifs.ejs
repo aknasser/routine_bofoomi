@@ -1,0 +1,30 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2>Nouvel Objectif</h2>
+    </div>
+    <div class="id2">
+        <form action="/admin/ajout/<%=element.nameLink%>" method="POST">
+            <label>Title
+                <input type="text" name="title" required>
+            </label>
+            <select name="category">
+                <option class="groupe-option">Category</option>
+                <% for(let i = 0; i < sections.length; i++) { %>
+                    <option value="<%= sections[i].name %>"><%= sections[i].name %></option>
+                <% }; %>
+            </select>
+            <select name="code_goal">
+                <option class="groupe-option">Code_Goal</option>
+                <% for(let i = 0; i < sections.length; i++) { %>
+                    <option class="groupe-option"><%= sections[i].name %></option>
+                    <% for(let j = 0; j < sections[i].code_goal.length; j++) { %>
+                        <option value="<%= sections[i].code_goal[j] %>"><%= sections[i].code_goal[j] %></option>
+                    <% }; %>
+                <% }; %>
+            </select>
+
+           
+            <input class="button" type="submit" value="SUIVANT">
+        </form>
+    </div>
+</div>

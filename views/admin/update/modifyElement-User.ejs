@@ -1,0 +1,51 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2>Modifier User</h2>
+    </div>
+    <div class="id2">
+        <form action="/admin/modifyElement/<%=schema %>/<%=element.id %>" method="POST">
+            <label> Prénom
+                <input type="text" name="prenom" value="<%= element.prenom %>" required>
+            </label>
+            <label> Nom
+                <input type="text" name="nom" value="<%= element.nom %>" required>
+            </label>
+            <label> Email
+                <input type="email" name="email" value="<%= element.email %>" required>
+            </label>
+            <label> Password
+                <input type="password" name="password" value="<%= element.password %>" required>
+            </label>
+            <label>Age
+                <input type="text" name="age" value="<%= element.age %>" required>
+            </label>
+            <label>Ville
+                <input type="text" name="ville" value="<%= element.ville %>" required>
+            </label>
+            <% for (let i = 0; i < sections.length; i++) { %>  
+            <h3 class="section"><%= sections[i].name%></h3>
+            <div class="multiradio-form aspiration">
+                <% for (let j = 0; j < objectifs.length; j++) { %>
+                    <% if (sections[i].name === objectifs[j].category) { %>
+                <label class="label5item"> <%= objectifs[j].title %>
+                    <input type="checkbox" class ="aCocher<%= i %> dodo" name="objectif" value="<%= objectifs[j].id %>">
+                </label>
+                    <% } %>
+                <% }; %>
+            </div>
+            <% } %>
+
+            <h3 id="bucketList" class = "section">Bucket List</h3>
+            <div class="multiradio-form aspiration">
+                <% bucketList.forEach(defis => { %>
+                    <label class="label5item"> <%= defis.title %>
+                    <input type="checkbox" class ="aCocher6 dodo" name="challenge" value="<%= defis.id %>">
+                </label>
+                <% }); %>
+            </div>
+
+            <input class="button" id="leBouton" type="submit" value="SUIVANT">
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/js/checkboxes_limit_admin.js"></script>   <!-- Pour limiter le nombre d'objectifs séléctionnables par l'user -->

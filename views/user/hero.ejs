@@ -2,337 +2,60 @@
 
     <!--UN RECAP DES STATS-->
         <div class="progression1">
-            <h1><%= hero.prenom %></h1>
+            <h1><%=hero.prenom %></h1>
+            <% for (let i = 0; i < categorie.length -2; i++) {     %>               <!-- -2 pour exclure la section fantôme ET bucket List -->
+
             <div class="competence corps">
                 <div class="stats">
+
+
+
+ 
+
+
                     <a href="#target-detail-corps" class="categorie-skills">
-                        <h2>Corps</h2>
-                    </a>
-                    <div class="evolution">
-                        <h4><%= hero.corps.scoreCorps.toFixed(1) %></h4>
-                    </div>
-        
-                    <a href=# class="booster">
-                        Details
+                        <h2><%=categorie[i].titrePage %></h2>
                     </a>
                 </div>
-                <div class="evolution" id="target-detail-corps">     <!--Quand l'user clique sur le lien, sa vue est redirigé ici(plus ergonomique)-->
-                    <div class="progress jauge">
-                        <% let lvlJauge = ((hero.corps.scoreCorps.toFixed(1) - Math.floor(hero.corps.scoreCorps)) *100) + "%" %>   <!--On obtient alors un chiffre entre 1 et 100. Il correspond au taf accompli avant de passer au prochain niveau. -->
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= lvlJauge %> " aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>   <!-- NOTE IMPORTANTE: Ici l'erreur signalée par VISUAL STUDIO n'est PAS à prendre en compte !!!!!!-->
-                    </div> 
-                    <h3 class="moins"><%= Math.floor(hero.corps.scoreCorps) %></h3>
-                    <h3 class="plus"><%= Math.ceil(hero.corps.scoreCorps) %></h3>
-                </div>
-            </div>
-            <div class="detail">
-                <h3><%= hero.corps.aspirationCorps %></h3>   <!--aspirationCorps.titre-->
-                <div class="element-detail">
-                    <h6>x<%= objectifCorps.multiplicateurPuissance %></h6>
-                    <h4>Puissance</h4>
-                    <h5><%= hero.corps.scorePuissance.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifCorps.multiplicateurTechnique %></h6>
-                    <h4>Technique</h4>
-                    <h5><%= hero.corps.scoreTechnique.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
+                <img src="<%= `/images/questionnaire/${categorie[i].namePic} `%>" alt="<%= categorie[i].namePicAlt %>">
+                
+                <% for (let j = 0; j < quetes.length; j++) {     %>                     
+                    <%  if (quetes[j].category === categorie[i].sectionName) { %>
+                        <h3><%= quetes[j].title %></h3>
+                            <% for (let l = 0; l < toDo.length; l++) {     %>
+                                <%  if (toDo[l].code_goal === quetes[j].code_goal) { %>
+                                    <form class= "form-note" action="/users/taskDone" method="POST">
+                                    <h4><%= toDo[l].title %></h4>                  
+                                    <input  type="hidden" name="routineEffectuee" value="<%= toDo[l].id %>">  <!-- Nous permet de récuperer la routineEffectuée par l'user. Nous servira pour créer un nouvel objet routineDone (voir module maJroutine) -->
 
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifCorps.multiplicateurSouplesse %></h6>
-                    <h4>Souplesse</h4>
-                    <h5><%= hero.corps.scoreSouplesse.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-
-       
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifCorps.multiplicateurSante %></h6>
-                    <h4>Santé</h4>
-                    <h5><%= hero.corps.scoreSante.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-
-    
-                </div>
-                <div class="preferences">
-                    <h4><%= hero.corps.sportFavori1 %></h4>
-                    <h4><%= hero.corps.sportFavori2 %></h4>
-                </div>
+                                    <h5>Comment cela s'est passé ?</h5>
+                                        <select name="noteObtenue">
+                                            <option value="0">F - J'ai rien foutu</option>
+                                            <option value="0.25">D - C'était super dur</option>
+                                            <option value="0.50">C - Challengeant</option>
+                                            <option value="0.75">B - Ca passe</option>
+                                            <option value="1">A - Pas de difficultés</option>
+                                            <option value="1.25">S- Trop facile</option>
+                                        </select>
+                                        <input type="submit" value="Fait" class="booster">
+                                    </form>
+                           <%   }      %>
+                         <%   }      %>
+                    <%   }      %>
+                <% } %>
+            <% } %>
             </div>
-    
-            <div class="competence esprit">
-                <div class="stats">
-                    <a href="#target-detail-esprit" class="categorie-skills">
-                        <h2>Esprit</h2>
-                    </a>
-    
-                    <div class="evolution">
-                        <h4><%= hero.esprit.scoreEsprit.toFixed(1) %></h4>
-                    </div>
         
-                    <a  class="booster">
-                        Details
-                    </a>
-                </div>
-                <div class="evolution" id="target-detail-esprit">
-                    <div class="progress jauge">
-                        <% lvlJauge = ((hero.esprit.scoreEsprit.toFixed(1) - Math.floor(hero.esprit.scoreEsprit)) *100) + "%" %>
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= lvlJauge %> " aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>   
-                    </div> 
-                    <h3 class="moins"><%= Math.floor(hero.esprit.scoreEsprit) %></h3>
-                    <h3 class="plus"><%= Math.ceil(hero.esprit.scoreEsprit) %></h3>
-                </div>
-            </div>
-            <div class="detail">
-                <h3><%= hero.esprit.aspirationEsprit %></h3>   <!--aspirationCorps.titre-->
-                <div class="element-detail">
-                    <h6>x<%= objectifEsprit.multiplicateurHardSkills %></h6> <!--objectifCorps.multiplicateurPuissance-->
-                    <h4>Hard Skills</h4>
-                    <h5><%= hero.esprit.scoreHardSkills.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifEsprit.multiplicateurSoul %></h6>
-                    <h4>Soul</h4>
-                    <h5><%= hero.esprit.scoreSoul.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifEsprit.multiplicateurCrafty %></h6>
-                    <h4>Crafty</h4>
-                    <h5><%= hero.esprit.scoreCrafty.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-       
-                </div>
-                <div class="preferences">
-                    <h4><%= hero.esprit.caractere %></h4>
-                    <h4><%= hero.esprit.discipline %></h4>
-                </div>
-            </div>
-    
-    
-            <div class="competence social">
-                <div class="stats">
-                    <a href="#target-detail-social" class="categorie-skills">
-                        <h2>Social</h2>
-                    </a>
-    
-                    <div class="evolution">
-                        <h4><%= hero.social.scoreSocial.toFixed(1) %></h4>
-                    </div>
-        
-                    <a  class="booster">
-                        Details
-                    </a>
-                </div>
-                <div class="evolution" id="target-detail-social">
-                    <div class="progress jauge">
-                        <% lvlJauge = ((hero.social.scoreSocial.toFixed(1) - Math.floor(hero.social.scoreSocial)) *100) + "%" %>
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= lvlJauge %> " aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>   
-                     </div> 
-                    <h3 class="moins"><%= Math.floor(hero.social.scoreSocial) %></h3>
-                    <h3 class="plus"><%= Math.ceil(hero.social.scoreSocial) %></h3>
-                </div>
-            </div>
-            <div class="detail">
-                <h3><%= hero.social.aspirationSocial %></h3>   <!--aspirationCorps.titre-->
-                <div class="element-detail">
-                    <h6>x<%= objectifSocial.multiplicateurPotes %></h6>
-                    <h4>Potes</h4>
-                    <h5><%= hero.social.scorePotes.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifSocial.multiplicateurAventure %></h6>
-                    <h4>Aventure</h4>
-                    <h5><%= hero.social.scoreAventure.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifSocial.multiplicateurCharisma %></h6>
-                    <h4>Charisme</h4>
-                    <h5><%= hero.social.scoreCharisma.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-                </div>
-            </div>
-    
-    
-    
-    
-            <div class="competence arts">
-                <div class="stats">
-                    <a href="#target-detail-arts" class="categorie-skills">
-                        <h2>Arts</h2>
-                    </a>
-    
-                    <div class="evolution">
-                        <h4><%= hero.arts.scoreArts.toFixed(1) %></h4>
-                    </div>
-    
-                    <a  class="booster">
-                        Details
-                    </a>
-                </div>
-                <div class="evolution" id="target-detail-arts">
-                    <div class="progress jauge">
-                        <% lvlJauge = ((hero.arts.scoreArts.toFixed(1) - Math.floor(hero.arts.scoreArts)) *100) + "%" %>
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= lvlJauge %> " aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div> 
-                    <h3 class="moins"><%= Math.floor(hero.arts.scoreArts) %></h3>
-                    <h3 class="plus"><%= Math.ceil(hero.arts.scoreArts) %></h3>
-                </div>
-            </div>
-            <div class="detail">
-                <h3><%= hero.arts.aspirationArts %></h3>   <!--aspirationCorps.titre-->
-                <div class="element-detail">
-                    <h6>x<%= objectifArts.multiplicateurArts %></h6> <!--objectifCorps.multiplicateurPuissance-->
-                    <h4>Talent</h4>
-                    <h5><%= hero.arts.scorePractice.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifArts.multiplicateurCulture %></h6>
-                    <h4>Culture</h4>
-                    <h5><%= hero.arts.scoreCulture.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifArts.multiplicateurExpressivite %></h6>
-                    <h4>Expressivité</h4>
-                    <h5><%= hero.arts.scoreExpressivite.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-                </div>
-                <div class="preferences">
-                    <h4><%= hero.arts.artFavori1 %></h4>
-                    <h4><%= hero.arts.artFavori2 %></h4>
-                </div>
-            </div>
-    
-    
-    
-            <div class="competence style">
-                <div class="stats">
-                    <a href="#target-detail-style" class="categorie-skills">
-                        <h2>Style</h2>
-                    </a>
-    
-                    <div class="evolution">
-                        <h4><%= hero.style.scoreStyle.toFixed(1) %></h4>
-                    </div>
-        
-                    <a  class="booster">
-                        Details
-                    </a>
-                </div>
-                <div class="evolution" id="target-detail-style">
-                    <div class="progress jauge">
-                        <% lvlJauge = ((hero.style.scoreStyle.toFixed(1) - Math.floor(hero.style.scoreStyle)) *100) + "%" %>
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= lvlJauge %> " aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div> 
-                    <h3 class="moins"><%= Math.floor(hero.style.scoreStyle) %></h3>
-                    <h3 class="plus"><%= Math.ceil(hero.style.scoreStyle) %></h3>
-                </div>
-            </div>
-            <div class="detail">
-                <h3><%= hero.style.aspirationStyle %></h3>   <!--aspirationCorps.titre-->
-                <div class="element-detail">
-                    <h6>x<%= objectifStyle.multiplicateurOriginal %></h6> <!--objectifCorps.multiplicateurPuissance-->
-                    <h4>Colorful</h4>
-                    <h5><%= hero.style.scoreColorful.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifStyle.multiplicateurElegance %></h6>
-                    <h4>Classy</h4>
-                    <h5><%= hero.style.scoreClassy.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifStyle.multiplicateurBasic %></h6>
-                    <h4>Smart</h4>
-                    <h5><%= hero.style.scoreSimple.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-                </div>
-            </div>
-    
-    
-            <div class="competence cooking">
-                <div class="stats">
-                    <a href="#target-detail-cooking" class="categorie-skills">
-                        <h2>Cuisine</h2>
-                    </a>
-                     <h4><%= hero.cooking.scoreCooking.toFixed(1) %></h4>
-                    <a  class="booster">
-                        Details
-                    </a>
-                </div>
-                <div class="evolution" id="target-detail-cooking">
-                    <div class="progress jauge">
-                        <% lvlJauge = ((hero.cooking.scoreCooking.toFixed(1) - Math.floor(hero.cooking.scoreCooking)) *100) + "%" %>
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= lvlJauge %> " aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div> 
-                    <h3 class="moins"><%= Math.floor(hero.cooking.scoreCooking) %></h3>
-                    <h3 class="plus"><%= Math.ceil(hero.cooking.scoreCooking) %></h3>
-                </div>
-            </div>
-            <d  iv class="detail">
-                <h3><%= hero.cooking.aspirationCooking %></h3>   <!--user.corps. aspirationCorps-->
-                <div class="element-detail">
-                    <h6>x<%= objectifCooking.multiplicateurHealthy %></h6> <!--objectifCorps.multiplicateurPuissance-->
-                    <h4>Healthy</h4>
-                    <h5><%= hero.cooking.scoreHealthy.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifCooking.multiplicateurClassic %></h6>
-                    <h4>Terroir</h4>
-                    <h5><%= hero.cooking.scoreClassic.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-    
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifCooking.multiplicateurDecouverte %></h6>
-                    <h4>Explorateur</h4>
-                    <h5><%= hero.cooking.scoreDecouverte.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-                </div>
-                <div class="element-detail">
-                    <h6>x<%= objectifCooking.multiplicateurPlaisir %></h6>
-                    <h4>Hédoniste</h4>
-                    <h5><%= hero.cooking.scorePlaisir.toFixed(1) %></h5> <!--user.corps.scorePuissance-->
-                </div>
-            </div>
-    
         </div>
     
-    <!--LES ACTIVITES EN COURS OU PASSEES-->
-        <div class="activites2">
-            <div class="encours">
-                <h3>Défis en cours</h3>
-                <%  for(let i = 0; i < categoriePrincipales.length; i++) {  %>                <!--Boucle For pour distribuer et obtenir le résultat pour chaque Catégorie-->
-                    <% categorieActivite = eval("hero.activites" + categoriePrincipales[i]); %>
 
-                <div class="activite">
-                    <h4><%= categorieActivite.categorie %></h4>
-                    <h5><%= categorieActivite.titre %></h5>
-                    <form class= "form-note" action=" <%= `/users/saveActivites/${hero._id}/${categoriePrincipales[i]} `%>" method="POST">
-                        <select name="noteObtenue">
-                            <option value="0">F</option>
-                            <option value="0.25">D</option>
-                            <option value="0.50">C</option>
-                            <option value="0.75">B</option>
-                            <option value="1">A</option>
-                            <option value="1.25">S</option>
-                        </select>
-                        <input type="submit" value="Fait" class="booster">
-                    </form>
-                </div>
-                <div class="detail-activite">   <!--S'affiche quand l'user clique sur l'activite. Affiche le détail/ptsExp/Voie-->
-                    <h4><%= categorieActivite.voieActivite %></h4>
-                    <h6><%= categorieActivite.description %></h6>
-                    <h5 class="scoreActivite">PTS d'EXP: <%= categorieActivite.totalPtsExp %></h5>
-                    <h5><span class="notepreRequis">F:</span> <%= categorieActivite.prerequisF %></h5>
-                    <h5><span class="notepreRequis">D:</span> <%= categorieActivite.prerequisD %></h5>
-                    <h5><span class="notepreRequis">C:</span> <%= categorieActivite.prerequisC %></h5>
-                    <h5><span class="notepreRequis">B:</span> <%= categorieActivite.prerequisB %></h5>
-                    <h5><span class="notepreRequis">A:</span> <%= categorieActivite.prerequisA %></h5>
-                    <h5><span class="notepreRequis">S:</span> <%= categorieActivite.prerequisS %></h5>
-                </div>
-                <% } %>  <!--Fin de la boucle FOR-->
-            </div>
-        </div>
+
+
+
+
+
+
+ 
     
         
     
@@ -341,11 +64,7 @@
         <div class="inspiration4">
             <h2>Inspiration du jour</h2>
             <h3>
-                A jack of all trades is a master of none, but oftentimes better than a master of one
-            </h3>
-            <h4>
-                A wise man.
-            </h4>
-    
+                <%= inspiration.title %>
+            </h3>    
         </div>
-    </div>
+</div>

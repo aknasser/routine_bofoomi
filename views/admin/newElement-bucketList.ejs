@@ -1,0 +1,42 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2>Nouveau Bucket List</h2>
+    </div>
+    <div class="id2">
+        <form action="/admin/ajout/<%=element.nameLink%>" method="POST">
+
+        <label>Title
+            <input type="text" name="title" required>
+        </label>
+        <div id="lesSteps">
+            <label>Step
+                <input type="text" name="steps" required>
+            </label>
+            <label>Step
+                <input type="text" name="steps" required>
+            </label>
+            <label>Step
+                <input type="text" name="steps" required>
+            </label>
+            <label>Step
+                <input type="text" name="steps" required>
+            </label>
+        </div>
+
+            <input class="button" type="button" id="BoutonStep"  value="ajouter step">
+
+
+            <select name="category">
+                <option class="groupe-option">Category</option>
+                <% for(let i = 0; i < sections.length; i++) { %>
+                    <option value="<%= sections[i].name %>"><%= sections[i].name %></option>
+                <% }; %>
+            </select>
+           
+           
+            <input class="button" type="submit" value="SUIVANT">
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/ajoutStep.js"></script> <!-- JS POUR LE FRONT JS  -->

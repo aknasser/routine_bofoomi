@@ -1,0 +1,19 @@
+<div class="grid-admin">
+    <h1>INSPIRATION</h1>
+   <%  articles.forEach(betterMan => { %>                   
+    <a href="/betterMan/inspiration/<%= betterMan.id %>">
+        <img src="<%= `/images/betterMan/${betterMan.picture} `%>" alt= "L'image de l'article">
+    </a>
+    <a href="/betterMan/inspiration/<%= betterMan.id %>">
+         <h2 class="select-admin adminCorps"><%= betterMan.title %></h2> 
+    </a>
+    <% }) %>
+
+    <div class="pagination">
+    <% for (let i = 0; i < pages.length; i++) {  %>
+        <a href="/betterMan/<%= pages[i] %> ">
+            <h3><%= pages[i] %> </h3>
+        </a>
+    <% } %>
+    </div>
+</div>

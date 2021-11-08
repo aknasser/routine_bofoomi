@@ -1,6 +1,6 @@
 {
-  "name": "to_build_a_hero",
-  "version": "1.0.0",
+  "name": "to_build_a_hero_routine",
+  "version": "2.0.0",
   "description": "Une app de developpement perso/productivité",
   "main": "main.js",
   "scripts": {
@@ -13,11 +13,13 @@
     "perso",
     "productivite",
     "super",
+    "routine",
     "hero"
   ],
   "author": "Nasser \"Nass La Menace\" Massadimi",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^3.5.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.5",

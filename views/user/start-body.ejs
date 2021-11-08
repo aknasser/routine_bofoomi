@@ -1,0 +1,30 @@
+<div class="grid-start">
+    <div class="titleimage1">
+        <h2 id="leTitre"><%= categorie.titrePage %></h2>
+        <img src="<%= `/images/questionnaire/${categorie.namePic} `%>" alt="<%= categorie.namePicAlt %>">
+    </div>
+    <div class="quest corps2">
+        <form action="/users/create/objectif" method="POST">
+            <input id="invisibleId" type="text" name="id" value="<%= id %>">
+
+            <div class="qcm">
+                <h3 class="thequestion"><%= categorie.sousTitre %></h3>
+                    <div class="multiradio-form aspiration">
+                        <% objectif.forEach(obj => { %>
+                        <label class="label5item"> <%= obj.title %>
+                            <input type="checkbox" class ="aCocher" name="objectif" value="<%= obj.id %>">
+                        </label>
+                        <% }); %>
+                    </div>
+            </div>
+            
+
+
+            <input class="button" id="leBouton" type="submit" value="SUIVANT">
+        </form>
+        
+    </div>
+</div>
+<script type="text/javascript" src="/js/checkboxes_limit.js"></script>
+
+

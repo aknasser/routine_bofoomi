@@ -1,0 +1,17 @@
+<h1>Les <% %></h1>
+<div class="grid-admin">
+    <% for (let i = 0; i < element.length; i++) {  %>
+
+        <a href="/admin/modifyElement/<%=categorie.schema %>/<%= element[i].id %>">
+            <% if (element[i].title) {  %>
+            <h2 class="select-admin"><%= element[i].title %></h2> 
+            <% } else { %>
+                <h2 class="select-admin"><%= element[i].email %></h2> 
+            <% } %>
+        </a>           
+        <a href="/admin/delete/<%=categorie.nameLink %>/<%= element[i].id%>?_method=DELETE">
+            <h2 class="">Supprimer</h2> 
+        </a>
+     
+    <% } %>
+</div>

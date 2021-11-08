@@ -1,0 +1,8 @@
+<div class="grid-admin">
+    <h1><%=aspiration %></h1>
+   <%  for (let i = 0; i < objectifs.length; i++) { %>                   <!-- categories.length - 1 pour éviter la catégorie Fantôme -->
+      <a href="/users/resultats/<%= currentUser.id %>/<%=aspiration %>/<%=objectifs[i].id %>">
+         <h2 class="select-admin adminCorps"><%=objectifs[i].title %></h2> 
+      </a>
+    <% } %>
+</div>

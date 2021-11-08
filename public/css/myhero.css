@@ -311,6 +311,12 @@ a:hover {
 .presentation1 a, .presentation1 a:hover {
     text-decoration: none;
 }
+
+
+#leBouton {
+    display: none;
+}
+
 .buttoncta{
     display: block;
     margin: 3.5rem auto;
